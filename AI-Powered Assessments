@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title="Cognitio+ AI-Powered Mental Health Assessments | Empower Emotional Wellness Digitally">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4a90e2"/>
+  <meta name="description" content="Discover how Cognitio+ transforms mental health onboarding with intelligent, digital assessments. Start your journey toward emotional resilience, healthy habits, and personalized wellness support powered by AI technology.">
+  <meta keywords="AI mental health assessments, digital wellness tools, emotional resilience apps, AI-powered wellbeing, smart mental health onboarding, mental wellness technology, personalized mental health support, digital mental health solutions, Cognitio+ emotional wellness">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192x192.png" sizes="192x192">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Montserrat:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Cognitio+ Digital Mental Health Onboarding</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Cognitio+ Digital Mental Health Onboarding",
+    "description": "A digital mental health web application for resilience, habit-building, mood tracking, and AI-powered coaching.",
+    "url": "https://asilva777.github.io/MH-Digital-Apps/",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "All"
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-title" class="skip-link">Skip to main content</a>
+  <nav>
+    <button class="dark-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span id="themeIcon" aria-hidden="true">🌙</span>
+      <span id="themeStatus" class="visually-hidden">Dark mode: Off</span>
+    </button>
+  </nav>
+  <main>
+    <div class="onboarding-container" role="main" aria-label="Cognitio+ Onboarding Steps">
+      <h1 id="main-title" tabindex="-1"></h1>
+
+      <!-- Step 1: Welcome -->
+      <section class="onboarding-step active" id="step-1" aria-label="Onboarding step 1: Welcome!">
+        <div class="step-icon" aria-label="Seedling icon">🌱</div>
+        <p>
+          Empower your wellbeing with our suite of digital mental health tools.<br>
+          Start your journey to resilience, healthy habits, and emotional wellness.
+        </p>
+        <div class="progress-dots" aria-label="Progress indicator">
+          <div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+        <div class="onboarding-actions">
+          <button class="btn next-step" aria-label="Next step">Next</button>
+        </div>
+      </section>
+
+      <!-- Step 2: Resilience Navigator -->
+      <section class="onboarding-step" id="step-2" aria-label="Onboarding step 2: Resilience Navigator">
+        <div class="step-icon" aria-label="Compass icon">🧭</div>
+        <h2>Resilience Navigator</h2>
+        <p>
+          Assess your personal resilience level through simple questions.
+          Discover your strengths and areas for growth in a fun and interactive way with
+          <a href="https://resilienceone.appimize.app/resilience-navigator/" target="_blank" class="app-link" aria-label="Open Resilience Navigator in new tab">Resilience Navigator</a>.
+        </p>
+        <ul>
+          <li>Simplified self-assessment</li>
+          <li>AI-powered personalized feedback</li>
+        </ul>
+        <div class="progress-dots" aria-label="Progress indicator">
+          <div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+        <div class="onboarding-actions">
+          <button class="btn secondary prev-step" aria-label="Back">Back</button>
+          <button class="btn next-step" aria-label="Next step">Next</button>
+        </div>
+      </section>
+
+      <!-- Step 3: Resilient Habit Designer -->
+      <section class="onboarding-step" id="step-3" aria-label="Onboarding step 3: Resilient Habit Designer">
+        <div class="step-icon" aria-label="Habit icon">🔄</div>
+        <h2>Habit Designer</h2>
+        <p>
+          Create and maintain healthy habits with this interactive tool based on the formula:
+          <strong>B = Motivation + Ability + Prompt</strong>.
+          Perfect for managing stress, regulating emotions, improving sleep hygiene, and preventing substance use.
+          Design habits that stick and transform your well-being with
+          <a href="https://resilienceone.appimize.app/habit-designer/" target="_blank" class="app-link" aria-label="Open Resilient Habit Designer in new tab">Resilient Habit Designer</a>.
+        </p>
+        <ul>
+        </ul>
+        <div class="progress-dots" aria-label="Progress indicator">
+          <div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+        <div class="onboarding-actions">
+          <button class="btn secondary prev-step" aria-label="Back">Back</button>
+          <button class="btn next-step" aria-label="Next step">Next</button>
+        </div>
+      </section>
+
+      <!-- Step 4: Journal -->
+      <section class="onboarding-step" id="step-4" aria-label="Onboarding step 4: Journal">
+        <div class="step-icon" aria-label="Book icon">📖</div>
+        <h2>Journal</h2>
+        <p>
+          Keep track of your moods and emotions with this digital journal.
+          It detects emotional trends and offers personalized wellness tips, helping you understand and improve your mental health with
+          <a href="https://resilienceone.appimize.app/journal" target="_blank" class="app-link" aria-label="Open Journal in new tab">Journal</a>.
+        </p>
+        <ul>
+          <li>AI-powered mood tracking & analysis</li>
+          <li>Personalized wellness advice</li>
+          <li>Private, secure, and easy to use</li>
+        </ul>
+        <div class="progress-dots" aria-label="Progress indicator">
+          <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+        <div class="onboarding-actions">
+          <button class="btn secondary prev-step" aria-label="Back">Back</button>
+          <button class="btn next-step" aria-label="Next step">Next</button>
+        </div>
+      </section>
+
+      <!-- Step 5: Well-Be -->
+      <section class="onboarding-step" id="step-5" aria-label="Onboarding step 5: Well-Be">
+        <div class="step-icon" aria-label="Flower icon">🌸</div>
+        <h2>Well-Be</h2>
+        <p>
+          Manage stress effectively with this comprehensive app. It provides tools and techniques to help you stay calm and focused, making stress management a breeze with
+          <a href="https://resilienceone.appimize.app/well-be" target="_blank" class="app-link" aria-label="Open Well-Be in new tab">Well-Be</a>.
+        </p>
+        <ul>
+          <li>Daily wellness activities</li>
+          <li>Guided meditations and relaxation tips</li>
+          <li>Progress visualization</li>
+          <li>Accessible, inclusive design</li>
+        </ul>
+        <div class="progress-dots" aria-label="Progress indicator">
+          <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div>
+        </div>
+        <div class="onboarding-actions">
+          <button class="btn secondary prev-step" aria-label="Back">Back</button>
+          <button class="btn next-step" aria-label="Next step">Next</button>
+        </div>
+      </section>
+
+  <div class="onboarding-step" id="login-signup-step">
+  <h2>Sign Up or Log In</h2>
+  <form id="auth-form" novalidate>
+  <input type="email" id="email" name="email" placeholder="Email" required style="margin-bottom: 12px; width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc;" />
+  <span id="email-error" class="error-message"></span>
+
+  <input type="password" id="password" name="password" placeholder="Password" required minlength="6" style="margin-bottom: 12px; width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc;" />
+  <div id="password-strength" style="margin-bottom: 8px; font-size: 0.95em;"></div>
+  <span id="password-error" class="error-message"></span>
+
+  <label style="display:flex; align-items:center; margin-bottom:6px;">
+    <input type="checkbox" id="remember" name="remember" style="margin-right:6px;"> Remember me
+  </label>
+
+  <a href="/forgot-password" style="display:block; margin-bottom:12px; font-size: 0.95em;">Forgot password?</a>
+
+  <button class="btn" type="submit">Continue</button>
+</form>
+</div>
+
+      <div class="feedback-link">
+        <form action="https://formspree.io/f/xkgbbbek" method="POST">
+          <label for="feedback" class="visually-hidden">Your feedback</label>
+          <input type="text" id="feedback" name="feedback" placeholder="Your feedback" required>
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="onboarding.js" defer></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js');
+      });
+    }
+  </script>
+  <script>
+const form = document.getElementById('auth-form');
+const emailInput = document.getElementById('email');
+const emailError = document.getElementById('email-error');
+const passwordInput = document.getElementById('password');
+const passwordError = document.getElementById('password-error');
+const strengthDisplay = document.getElementById('password-strength');
+
+// Password strength logic
+passwordInput.addEventListener('input', function() {
+  const val = passwordInput.value;
+  let strength = 'Weak';
+  let color = 'red';
+  if (val.length > 7 && /[A-Z]/.test(val) && /\d/.test(val) && /[^A-Za-z0-9]/.test(val)) {
+    strength = 'Strong';
+    color = 'green';
+  } else if (val.length > 5 && (/[A-Z]/.test(val) || /\d/.test(val))) {
+    strength = 'Medium';
+    color = 'orange';
+  }
+  strengthDisplay.textContent = 'Strength: ' + strength;
+  strengthDisplay.style.color = color;
+});
+
+// Validation on submit
+form.addEventListener('submit', function(e) {
+  let valid = true;
+  emailError.textContent = '';
+  passwordError.textContent = '';
+  
+  // Email validation
+  if (!emailInput.value.match(/^[^@]+@[^@]+\.[^@]+$/)) {
+    emailError.textContent = 'Please enter a valid email address.';
+    valid = false;
+  }
+  // Password validation
+  if (passwordInput.value.length < 6) {
+    passwordError.textContent = 'Password must be at least 6 characters.';
+    valid = false;
+  }
+  if (!valid) e.preventDefault();
+  // You can add logic here for actual authentication if valid
+});
+</script>
+  <script>
+document.getElementById('auth-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  // Fetch values
+  const email = this.email.value;
+  const password = this.password.value;
+  // (Optional) Validate or send to backend here
+  alert('Form submitted!\nEmail: ' + email);
+  // Implement real logic as needed
+});
+</script>
+</body>
+</html>
