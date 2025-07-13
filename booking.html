@@ -18,7 +18,7 @@
 
   <!-- Favicon -->
   <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon"/>
-  <link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png"/>
+  <link rel="apple-touch-icon" href="https://appimize.app/assets/apps/user_1097/app_3046/draft/icon/app_logo.png?1752403490"/>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
@@ -52,6 +52,28 @@
           Email:
           <input type="email" required>
         </label>
+        <label>
+          Street, House / Unit Number:
+          <input type="street and house number" required>
+        </label>
+        <label>
+          :
+          <input type="street and house number" required>
+        </label>
+        <label>
+          Population Segment
+          <select id="means-test">
+            <option value="elderly">Elderly</option>
+            <option value="solo parent">Solo Parent</option>
+            <option value="student">Student</option>
+            <option value="OSY">School Leaver</option>
+            <option value="pwd">Person with Disability</option>
+            <option value="lgbtq+">LGBTQ+</option>
+            <option value="CHC">With Chronic Health Condition</option>
+            <option value="LIF">Low Income Family</option>
+            <option value="GP">General Public</option>
+          </select>
+        </label>
 
         <label>
           Preferred Date:
@@ -71,17 +93,6 @@
             <option value="group">Group Therapy</option>
           </select>
         </label>
-
-        <label>
-          Do you qualify for subsidies?
-          <select id="means-test">
-            <option value="low-income">Low Income</option>
-            <option value="student">Student</option>
-            <option value="pwd">PWD</option>
-            <option value="none">None</option>
-          </select>
-        </label>
-
         <button type="submit">Calculate Price & Book</button>
       </form>
 
