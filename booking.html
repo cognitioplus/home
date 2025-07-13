@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cognitio+ | Book Mental Health Services</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Book your mental health services with dynamic pricing and subsidy options."/>
+  <meta name="keywords" content="mental health booking Philippines, dynamic pricing therapy, subsidized counseling, AI-driven pricing"/>
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Cognitio+ | Book Mental Health Services"/>
+  <meta property="og:description" content="Book culturally sensitive mental health services in the Philippines with dynamic pricing and subsidy options."/>
+  <meta property="og:image" content="/assets/images/og-image.jpg"/>
+  <meta property="og:url" content="https://cognitioplus.github.io/booking/ "/>
+  <meta property="og:type" content="website"/>
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon"/>
+  <link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png"/>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- No JS fallback -->
+  <script>document.documentElement.classList.remove("no-js");</script>
+</head>
+
+<body>
+  <header>
+    <h1>Cognitio+</h1>
+    <p>Book your mental health services with dynamic pricing and subsidy options.</p>
+  </header>
+
+  <main class="fade-up">
+    <section class="form-section">
+      <h2>Service Booking Form</h2>
+      <form id="booking-form">
+        <label>
+          Full Name:
+          <input type="text" required>
+        </label>
+
+        <label>
+          Email:
+          <input type="email" required>
+        </label>
+
+        <label>
+          Preferred Date:
+          <input type="date" required>
+        </label>
+
+        <label>
+          Preferred Time:
+          <input type="time" required>
+        </label>
+
+        <label>
+          Type of Service:
+          <select id="service-type">
+            <option value="teletherapy">Teletherapy</option>
+            <option value="in-person">In-Person Session</option>
+            <option value="group">Group Therapy</option>
+          </select>
+        </label>
+
+        <label>
+          Do you qualify for subsidies?
+          <select id="means-test">
+            <option value="low-income">Low Income</option>
+            <option value="student">Student</option>
+            <option value="pwd">PWD</option>
+            <option value="none">None</option>
+          </select>
+        </label>
+
+        <button type="submit">Calculate Price & Book</button>
+      </form>
+
+      <div id="price-result"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cognitio+. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+</html>
