@@ -1,125 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pre-Booking Assessment</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cognitio+ | Booking & Consultation</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Confidential mental health booking form, powered by Cognitio+ AI and community-based care." />
+  <meta name="author" content="Cognitio+" />
+  <meta property="og:title" content="Cognitio+ Booking" />
+  <meta property="og:description" content="Book your confidential consultation online." />
+  <meta property="og:image" content="https://appimize.app/assets/apps/user_1097/app_3046/draft/icon/app_logo.png?1752403490" />
+  <meta property="og:url" content="https://cognitioplus.github.io/booking.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0077cc" />
+  <link rel="apple-touch-icon" href="https://appimize.app/assets/apps/user_1097/app_3046/draft/icon/app_logo.png?1752403490" />
+  <link rel="icon" href="https://appimize.app/assets/apps/user_1097/app_3046/draft/icon/app_logo.png?1752403490" sizes="32x32" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Pre-Booking Assessment</h1>
-        <form id="assessmentForm">
-            <!-- General Information Section -->
-            <fieldset>
-                <legend>Personal Information</legend>
-                <label for="fullName">Full Name:</label>
-                <input type="text" id="fullName" name="fullName" required>
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age" required>
-                <label for="gender">Gender:</label>
-                <select id="gender" name="gender" required>
-                    <option value="Female">Female</option>
-                    <option value="Male">Male</option>
-                    <option value="Other">Other</option>
-                </select>
-                <label for="occupation">Occupation:</label>
-                <input type="text" id="occupation" name="occupation" required>
-                <label for="annualIncome">Annual Income:</label>
-                <input type="text" id="annualIncome" name="annualIncome" required>
-                <label for="maritalStatus">Marital Status:</label>
-                <select id="maritalStatus" name="maritalStatus" required>
-                    <option value="Single">Single</option>
-                    <option value="Married">Married</option>
-                </select>
-                <label for="familySituation">Family Situation:</label>
-                <input type="text" id="familySituation" name="familySituation" required>
-                <label for="location">Location:</label>
-                <input type="text" id="location" name="location" required>
-            </fieldset>
-            <!-- Mental Health and Well-being Section -->
-            <fieldset>
-                <legend>Mental Health and Well-being</legend>
-                <label for="mentalHealthConcerns">What are your primary mental health concerns?</label>
-                <input type="text" id="mentalHealthConcerns" name="mentalHealthConcerns" required>
-                <label for="previousServices">Have you previously sought mental health services?</label>
-                <select id="previousServices" name="previousServices" required>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
-                <label for="serviceTypes">If yes, what type of services have you used?</label>
-                <input type="text" id="serviceTypes" name="serviceTypes">
-                <label for="personalAspirations">What are your personal aspirations related to mental health?</label>
-                <input type="text" id="personalAspirations" name="personalAspirations" required>
-                <label for="professionalGoals">What are your professional goals?</label>
-                <input type="text" id="professionalGoals" name="professionalGoals" required>
-                <label for="mainChallenges">What are your main challenges in managing mental health?</label>
-                <input type="text" id="mainChallenges" name="mainChallenges" required>
-            </fieldset>
-            <!-- Service Preferences Section -->
-            <fieldset>
-                <legend>Service Preferences</legend>
-                <label for="serviceType">What type of mental health services are you looking for?</label>
-                <input type="text" id="serviceType" name="serviceType" required>
-                <label for="sessionFrequency">How frequently do you prefer to have sessions?</label>
-                <select id="sessionFrequency" name="sessionFrequency" required>
-                    <option value="Weekly">Weekly</option>
-                    <option value="Bi-weekly">Bi-weekly</option>
-                    <option value="Monthly">Monthly</option>
-                </select>
-                <label for="budget">What is your budget for mental health services per month?</label>
-                <input type="text" id="budget" name="budget" required>
-                <label for="preferredChannels">What are your preferred channels for accessing mental health services?</label>
-                <input type="text" id="preferredChannels" name="preferredChannels" required>
-                <label for="providerPreferences">Do you have any specific preferences for service providers?</label>
-                <input type="text" id="providerPreferences" name="providerPreferences">
-            </fieldset>
-            <!-- Accessibility and Barriers Section -->
-            <fieldset>
-                <legend>Accessibility and Barriers</legend>
-                <label for="accessBarriers">What are the main barriers you face in accessing mental health services?</label>
-                <input type="text" id="accessBarriers" name="accessBarriers" required>
-                <label for="triggers">What triggers you to seek mental health support?</label>
-                <input type="text" id="triggers" name="triggers" required>
-                <label for="preferredTimes">What are your preferred times for scheduling sessions?</label>
-                <input type="text" id="preferredTimes" name="preferredTimes" required>
-            </fieldset>
-            <!-- Equitable Pricing Model Section -->
-            <fieldset>
-                <legend>Equitable Pricing Model</legend>
-                <label for="slidingScale">Would you be interested in a sliding scale payment option based on your income?</label>
-                <select id="slidingScale" name="slidingScale" required>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
-                <label for="communityPrograms">Are you open to participating in community-based mental health programs?</label>
-                <select id="communityPrograms" name="communityPrograms" required>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
-                <label for="financialAssistance">Would you like to receive information about financial assistance or subsidies for mental health services?</label>
-                <select id="financialAssistance" name="financialAssistance" required>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
-            </fieldset>
-            <!-- Consent and Privacy Section -->
-            <fieldset>
-                <legend>Consent and Privacy</legend>
-                <label for="consent">Do you consent to the collection and use of your personal and health information in accordance with HIPAA regulations?</label>
-                <select id="consent" name="consent" required>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
-                <label for="communicationConsent">Do you agree to receive communication about your appointments and services via secure online platforms?</label>
-                <select id="communicationConsent" name="communicationConsent" required>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
-            </fieldset>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-    <script src="scripts.js"></script>
+<header>
+  <img src="https://appimize.app/assets/apps/user_1097/app_3046/draft/icon/app_logo.png?1752403490" alt="Cognitio+ Logo" class="logo" />
+  <h1>Book Your Appointment</h1>
+</header>
+
+<main class="container">
+  <form id="bookingForm">
+    <h2>I. Client Information</h2>
+    <label>Full Name: <input type="text" name="fullName" required></label>
+    <label>Date of Birth: <input type="date" name="dob" required></label>
+    <label>Age: <input type="number" name="age" required></label>
+    <label>Gender: 
+      <select name="gender">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Address: <input type="text" name="address"></label>
+    <label>Phone Number: <input type="tel" name="phone"></label>
+    <label>Email: <input type="email" name="email"></label>
+    <label>Emergency Contact: <input type="text" name="emergencyContact"></label>
+    <label>Emergency Phone: <input type="tel" name="emergencyPhone"></label>
+
+    <h2>II. Appointment Details</h2>
+    <label>Date of Consultation: <input type="datetime-local" name="consultDate"></label>
+    <label>Referred by: <input type="text" name="referredBy"></label>
+    <label>Preferred Contact:
+      <select name="contactMethod">
+        <option>Phone</option>
+        <option>Email</option>
+        <option>Other</option>
+      </select>
+    </label>
+
+    <h2>III. Presenting Concerns</h2>
+    <label><input type="checkbox" name="concerns" value="Anxiety"> Anxiety</label>
+    <label><input type="checkbox" name="concerns" value="Depression"> Depression</label>
+    <label><input type="checkbox" name="concerns" value="Stress"> Stress</label>
+    <label><input type="checkbox" name="concerns" value="Substance use"> Substance use</label>
+    <label><input type="checkbox" name="concerns" value="Relationship issues"> Relationship issues</label>
+    <label><input type="checkbox" name="concerns" value="Other"> Other</label>
+    <label>Briefly describe your concerns:
+      <textarea name="concernDescription"></textarea>
+    </label>
+
+    <h2>IV. Mental Health & Medical History</h2>
+    <label>Previously seen a therapist? <input type="checkbox" name="historyTherapist"></label>
+    <label>Current medications? <input type="checkbox" name="historyMeds"></label>
+    <label>Hospitalizations? <input type="checkbox" name="historyHospital"></label>
+    <label>Substance abuse history? <input type="checkbox" name="historySubstance"></label>
+    <label>Medical conditions? <input type="checkbox" name="historyMedical"></label>
+    <label>Family history of mental illness? <input type="checkbox" name="historyFamily"></label>
+
+    <h2>V. Risk & Safety Assessment</h2>
+    <label>Thoughts of harming self? <input type="checkbox" name="riskSelfHarm"></label>
+    <label>Thoughts of harming others? <input type="checkbox" name="riskOtherHarm"></label>
+    <label>Explain if yes: <textarea name="riskExplanation"></textarea></label>
+
+    <h2>VI. Lifestyle & Support</h2>
+    <label>Occupation / School: <input type="text" name="occupation"></label>
+    <label>Living situation: 
+      <select name="livingSituation">
+        <option>Alone</option>
+        <option>With family</option>
+        <option>With partner/roommates</option>
+      </select>
+    </label>
+    <label>Support system: <input type="text" name="support"></label>
+    <label>Coping strategies: <textarea name="coping"></textarea></label>
+
+    <h2>VII. Goals for Consultation / Therapy</h2>
+    <label><textarea name="goals"></textarea></label>
+      
+<h2>Appointment Details</h2>
+<label>Date of Consultation: <input type="date" name="consultDate" required></label>
+<label>Preferred Time:
+  <input type="time" name="consultTime" required>
+</label>
+<label>Referred by: <input type="text" name="referredBy"></label>
+<label>Preferred Contact:
+  <select name="contactMethod">
+    <option>Phone</option>
+    <option>Email</option>
+    <option>Other</option>
+  </select>
+</label>
+    <label>
+    <h2>Dynamic Price</h2>
+    <p>Calculated price: PHP <span id="price">0</span></p>
+</label>
+    <h2>VIII. Consent</h2>
+    <label>
+      <input type="checkbox" required> I acknowledge that information is accurate and consent to treatment.
+    </label>
+
+    <button type="submit">Submit Booking</button>
+  </form>
+</main>
+
+<footer>
+  &copy; 2025 Cognitio+ . All Rights Reserved.
+</footer>
+
+<script src="booking-script.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('booking-service-worker.js')
+    .then(() => console.log('✅ PWA ready'))
+    .catch(console.error);
+}
+</script>
 </body>
 </html>
