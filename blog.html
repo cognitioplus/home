@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cognitio+ Blog | Insights & Stories on Mental Health</title>
+  
+  <!-- SEO -->
+  <meta name="description" content="Explore expert articles, stories, and resources on mental health, resilience, and culturally grounded care from Cognitio+." />
+  <meta name="author" content="Cognitio+" />
+  <meta property="og:title" content="Cognitio+ Blog" />
+  <meta property="og:description" content="Your trusted mental health knowledge hub." />
+  <meta property="og:image" content="icons/og-image.png" />
+  <meta property="og:url" content="https://cognitioplus.github.io/blog.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0077cc" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="icon" href="icons/favicon-32.png" sizes="32x32" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <img src="icons/logo.png" alt="Cognitio+ Logo" class="logo" />
+    <h1>Cognitio+ Blog</h1>
+    <p>Your trusted mental health knowledge hub</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="booking.html">Book</a>
+    <a href="helpdesk.html">Helpdesk</a>
+    <a href="blog.html" class="active">Blog</a>
+  </nav>
+
+  <main>
+    <section aria-labelledby="latest-posts">
+      <h2 id="latest-posts">Latest Posts</h2>
+      <div id="posts" class="posts-container">
+        <!-- Dynamic posts will load here -->
+      </div>
+    </section>
+
+    <section aria-labelledby="leave-comment">
+      <h2 id="leave-comment">Leave a Comment</h2>
+      <form id="commentForm">
+        <label>Name
+          <input type="text" name="name" required />
+        </label>
+        <label>Comment
+          <textarea name="comment" required></textarea>
+        </label>
+        <button type="submit">Post Comment</button>
+      </form>
+      <div id="comments" class="comments-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Cognitio+ | <a href="privacy.html">Privacy & Policy</a>
+  </footer>
+
+  <script src="blog.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('✅ PWA ready'))
+        .catch(console.error);
+    }
+  </script>
+</body>
+</html>
