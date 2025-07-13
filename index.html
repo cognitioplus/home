@@ -7,19 +7,40 @@
   <title>Cognitio+ | Culturally Sensitive Mental Health Services</title>
 
   <!-- SEO -->
-  <meta name="description" content="Cognitio+ offers AI-powered digital therapy and community-based mental health services in the Philippines. Inclusive, affordable, and culturally sensitive care for all Filipinos."/>
-  <meta name="keywords" content="mental health services Philippines, online therapy Philippines, AI mental health tools, Indigenous mental health care, substance abuse recovery Philippines, inclusive mental health, trauma-informed care, PWD mental health, youth mental health camps"/>
+  <meta name="description" content="Cognitio+ offers AI-powered digital therapy and community-based mental health services in the Philippines. Inclusive, affordable, and culturally sensitive care for Filipinos.">
+  <meta name="keywords" content="mental health services Philippines, online therapy Philippines, AI mental health tools, Indigenous mental health care, substance abuse recovery Philippines, inclusive care, Filipino wellness, teletherapy, community programs, youth camps, accessible counseling">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://cognitioplus.github.io/home/" />
 
   <!-- Open Graph / Social Media -->
   <meta property="og:title" content="Cognitio+ | Culturally Sensitive Mental Health Services in the Philippines"/>
-  <meta property="og:description" content="Cognitio+ offers AI-powered digital therapy and community-based mental health services in the Philippines. Inclusive, affordable, and culturally sensitive care for all Filipinos."/>
-  <meta property="og:image" content="https://cognitioplus.github.io/home/assets/images/og-image.jpg "/>
-  <meta property="og:url" content="https://cognitioplus.github.io/home/ "/>
+  <meta property="og:description" content="Cognitio+ offers AI-powered digital therapy and community-based mental health services in the Philippines. Inclusive, affordable, and culturally sensitive care for Filipinos."/>
+  <meta property="og:image" content="https://cognitioplus.github.io/home/assets/images/og-image.jpg"/>
+  <meta property="og:url" content="https://cognitioplus.github.io/home/"/>
   <meta property="og:type" content="website"/>
 
-  <!-- Favicon -->
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cognitio+ | Culturally Sensitive Mental Health Services">
+  <meta name="twitter:description" content="Cognitio+ offers AI-powered digital therapy and community-based mental health services in the Philippines.">
+  <meta name="twitter:image" content="https://cognitioplus.github.io/home/assets/images/og-image.jpg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Cognitio+",
+    "url": "https://cognitioplus.github.io/home/",
+    "logo": "https://cognitioplus.github.io/home/assets/images/og-image.jpg"
+  }
+  </script>
+
+  <!-- Favicon & PWA -->
   <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon"/>
   <link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png"/>
+  <link rel="manifest" href="/manifest.json">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Oswald&display=swap" rel="stylesheet">
@@ -30,57 +51,62 @@
   <!-- No JS fallback -->
   <script>document.documentElement.classList.remove("no-js");</script>
 </head>
-
 <body>
-  <header class="fade-up">
-    <h1>Cognitio+</h1>
-    <p>Your Parner in Resilience. Rooted in Culture. Powered with Technology!</p>
-  </header>
-  </div>
-    <!-- Responsive Navigation Toggle -->
-    <button class="nav-toggle" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fa fa-bars"></i>
-    </button>
+  <header class="fade-up" role="banner">
+    <div class="top-bar">
+      <h1>Cognitio+</h1>
+      <p>Your Partner in Resilience. Rooted in Culture. Powered by Technology!</p>
+      <!-- Language Switcher -->
+      <form id="lang-switcher-form" aria-label="Language selector" style="display:inline;">
+        <label for="lang-switcher" class="visually-hidden">Language</label>
+        <select id="lang-switcher" name="locale" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="fil">Filipino</option>
+          <option value="ceb">Cebuano</option>
+        </select>
+      </form>
+    </div>
+    <!-- Improved Navigation Tabs -->
     <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+      <button class="nav-toggle" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fa fa-bars" aria-hidden="true"></span>
+      </button>
       <ul>
-        <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
-        <li><a href="solutions.html"><i class="fa fa-brain"></i>Solutions</a></li>
-        <li><a href="services.html"><i class="fa fa-hand-holding-heart"></i> Services</a></li>
-           <li><a href="booking.html"><i class="fa fa-hand-holding-heart"></i>Book Appointment</a></li>
-        <li><a href="resources.html"><i class="fa fa-book"></i> Resources</a></li>
-        <li><a href="blog.html"><i class="fa fa-blog"></i> Blog</a></li>
-        <li><a href="store.html"><i class="fa fa-store"></i> Store</a></li>
-        <li><a href="faq.html"><i class="fa fa-question-circle"></i> FAQ</a></li>
-        <li><a href="support.html"><i class="fa fa-life-ring"></i> Support</a></li>
-        <li><a href="about.html"><i class="fa fa-users"></i> About</a></li>
-        <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact Us</a></li>
-        <li><a href="policies.html"><i class="fa fa-file-contract"></i> Policies</a></li>
-        <li><a href="login.html"><i class="fa fa-user"></i> Login/Signup</a></li>
+        <li><a href="index.html"><span class="fa fa-home" aria-hidden="true"></span> <span>Home</span></a></li>
+        <li><a href="solutions.html"><span class="fa fa-brain" aria-hidden="true"></span> <span>Solutions</span></a></li>
+        <li><a href="services.html"><span class="fa fa-hand-holding-heart" aria-hidden="true"></span> <span>Services</span></a></li>
+        <li><a href="booking.html"><span class="fa fa-calendar" aria-hidden="true"></span> <span>Book Appointment</span></a></li>
+        <li><a href="resources.html"><span class="fa fa-book" aria-hidden="true"></span> <span>Resources</span></a></li>
+        <li><a href="blog.html"><span class="fa fa-blog" aria-hidden="true"></span> <span>Blog</span></a></li>
+        <li><a href="store.html"><span class="fa fa-store" aria-hidden="true"></span> <span>Store</span></a></li>
+        <li><a href="faq.html"><span class="fa fa-question-circle" aria-hidden="true"></span> <span>FAQ</span></a></li>
+        <li><a href="support.html"><span class="fa fa-life-ring" aria-hidden="true"></span> <span>Support</span></a></li>
+        <li><a href="about.html"><span class="fa fa-users" aria-hidden="true"></span> <span>About</span></a></li>
+        <li><a href="contact.html"><span class="fa fa-envelope" aria-hidden="true"></span> <span>Contact Us</span></a></li>
+        <li><a href="policies.html"><span class="fa fa-file-contract" aria-hidden="true"></span> <span>Policies</span></a></li>
+        <li><a href="login.html"><span class="fa fa-user" aria-hidden="true"></span> <span>Login/Signup</span></a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Banner from Canva -->
-  <section class="section hero fade-up">
-    <iframe src=" <div style="position: relative; width: 100%; height: 0; padding-top: 50.0000%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https://www.canva.com/design/DAGssLKY3ks/g5BoDWghGhK4JKXKoeYI7g/view?embed">
-  </iframe>
-</div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGssLKY3ks&#x2F;g5BoDWghGhK4JKXKoeYI7g&#x2F;view?utm_content=DAGssLKY3ks&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">" title="Hero Banner"></iframe>
-  </section>
+  <main role="main">
+    <!-- Hero Banner -->
+    <section class="section hero fade-up" aria-label="Hero banner">
+      <div style="position: relative; width: 100%; height: 0; padding-top: 50%; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1em; margin-bottom: 1em; overflow: hidden; border-radius: 8px;">
+        <iframe loading="lazy" title="Hero Banner" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;" src="https://www.canva.com/design/DAGssLKY3ks/g5BoDWghGhK4JKXKoeYI7g/view?embed" allowfullscreen></iframe>
+      </div>
+      <a href="https://www.canva.com/design/DAGssLKY3ks/g5BoDWghGhK4JKXKoeYI7g/view?utm_content=DAGssLKY3ks&utm_campaign=designshare&utm_medium=embeds&utm_source=link" rel="noopener" target="_blank">View on Canva</a>
+    </section>
 
-  <!-- Mission Statement -->
-  <section class="section mission fade-up">
-    <h2>Mental Health for All Filipinos</h2>
-    <p>Cognitio+ bridges the gap between AI-powered digital therapy and community-based mental health care in the Philippines. We provide culturally sensitive, inclusive, and accessible services to marginalized, rural, and Indigenous communities.</p>
-  </section>
+    <!-- Mission Statement -->
+    <section class="section mission fade-up" aria-labelledby="mission-title">
+      <h2 id="mission-title">Mental Health for All Filipinos</h2>
+      <p>Cognitio+ bridges the gap between AI-powered digital therapy and community-based mental health care in the Philippines. We provide culturally sensitive, inclusive, and accessible services to marginalized and underserved communities.</p>
+    </section>
 
-   <!-- Why Cognitio+ Section with Images -->
+    <!-- Why Cognitio+ Section -->
     <section class="section why-cognitio fade-up" aria-labelledby="why-title">
-      <h2 id="why-title"><i class="fa fa-question"></i> Why Cognitio+?</h2>
+      <h2 id="why-title"><span class="fa fa-question" aria-hidden="true"></span> Why Cognitio+?</h2>
       <div class="cards">
         <article class="card" aria-label="AI-Driven Mental Health Tools">
           <img src="https://cognitio-plus.aiwaapp.live/cache/media_cache/0414d06232062d6b118735456a42fdcb.png" alt="AI-Driven Tools" width="100%" height="100%" loading="lazy" />
@@ -98,105 +124,101 @@
           <p>Partnerships with LGUs, NGOs, and Indigenous leaders to deliver education, youth camps, and worker support.</p>
         </article>
         <article class="card" aria-label="Substance Abuse Prevention & Recovery">
-          <img src="https://cognitio-plus.aiwaapp.live/cache/media_cache/010f98f2c2f9eb93b113ed0d20e317d5.png" alt="Substance Abuse" width="100%" height="8100%" loading="lazy" />
+          <img src="https://cognitio-plus.aiwaapp.live/cache/media_cache/010f98f2c2f9eb93b113ed0d20e317d5.png" alt="Substance Abuse" width="100%" height="100%" loading="lazy" />
           <h3>Substance Abuse Prevention & Recovery</h3>
           <p>Screening, peer groups, and gender-responsive rehab navigation for those affected by addiction.</p>
         </article>
       </div>
     </section>
 
-    <!-- OUR SOLUTIONS Section (Embed) -->
+    <!-- Our Solutions Section -->
     <section class="section solutions fade-up" aria-labelledby="solutions-title">
-      <h2 id="solutions-title"><i class="fa fa-brain"></i> Our Solutions</h2>
-      <div style="position: relative; width: 100%; height: 0; padding-top: 50.0000%;
-        padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-        border-radius: 8px; will-change: transform;">
-        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-          src="https://www.canva.com/design/DAGl_BflMac/VYUR_nkOQI1Cqerx5W_lCQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-        </iframe>
+      <h2 id="solutions-title"><span class="fa fa-brain" aria-hidden="true"></span> Our Solutions</h2>
+      <div style="position: relative; width: 100%; height: 0; padding-top: 50%; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1em; margin-bottom: 1em; overflow: hidden; border-radius: 8px;">
+        <iframe loading="lazy" title="Our Solutions" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;" src="https://www.canva.com/design/DAGl_BflMac/VYUR_nkOQI1Cqerx5W_lCQ/view?embed" allowfullscreen></iframe>
       </div>
-      <a href="https://www.canva.com/design/DAGl_BflMac/VYUR_nkOQI1Cqerx5W_lCQ/view?utm_content=DAGl_BflMac&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Full Screen</a>
+      <a href="https://www.canva.com/design/DAGl_BflMac/VYUR_nkOQI1Cqerx5W_lCQ/view?utm_content=DAGl_BflMac&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener">View on Canva</a>
     </section>
 
-
-  <!-- Core Services -->
-  <section class="section core-services fade-up">
-    <h2>Our Core Services</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Digital Mental Health Tools</h3>
-        <ul>
-          <li>Resilience Self-Assessment App</li>
-          <li>Emotional Wellness Tracker</li>
-          <li>Behavior Design Modules</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Teletherapy & Online Counseling</h3>
-        <ul>
-          <li>Video, voice, or chat sessions</li>
-          <li>Multi-language support</li>
-          <li>Flexible pricing models</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Community-Based Mental Health Programs</h3>
-        <ul>
-          <li>Barangay Wellness Hubs</li>
-          <li>Youth Mental Health Camps</li>
-          <li>Caring for the Carers (C4C)</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Substance Use Recovery Support</h3>
-        <ul>
-          <li>Online Screening & Brief Intervention (SBI)</li>
-          <li>Peer-led recovery groups</li>
-          <li>Customized rehab pathways</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Specialized Services -->
-  <section class="section specialized-services fade-up">
-    <h2>Inclusive Mental Health for All</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Indigenous Healing Dialogues</h3>
-        <p>Integrating traditional practices into modern care frameworks.</p>
-      </div>
-      <div class="card">
-        <h3>PWD Mental Health Services</h3>
-        <p>Tools and training for independence, coping strategies, and advocacy support.</p>
-      </div>
-      <div class="card">
-        <h3>Emergency Mental Health Response</h3>
-        <p>Psychological First Aid (PFA) training and 24/7 trauma-informed helplines for crisis support and referrals.</p>
+    <!-- Core Services -->
+    <section class="section core-services fade-up" aria-labelledby="core-title">
+      <h2 id="core-title">Our Core Services</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Digital Mental Health Tools</h3>
+          <ul>
+            <li>Resilience Self-Assessment App</li>
+            <li>Emotional Wellness Tracker</li>
+            <li>Behavior Design Modules</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Teletherapy & Online Counseling</h3>
+          <ul>
+            <li>Video, voice, or chat sessions</li>
+            <li>Multi-language support</li>
+            <li>Flexible pricing models</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Community-Based Mental Health Programs</h3>
+          <ul>
+            <li>Barangay Wellness Hubs</li>
+            <li>Youth Mental Health Camps</li>
+            <li>Caring for the Carers (C4C)</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Substance Use Recovery Support</h3>
+          <ul>
+            <li>Online Screening & Brief Intervention (SBI)</li>
+            <li>Peer-led recovery groups</li>
+            <li>Customized rehab pathways</li>
+          </ul>
+        </article>
       </div>
     </section>
 
-  <!-- Who We Serve -->
-  <section class="section who-we-serve fade-up">
-    <h2>Who We Serve</h2>
-    <ul>
-      <li>Individuals and families seeking affordable mental health care in the Philippines</li>
-      <li>Local governments and NGOs implementing community mental health programs</li>
-      <li>Schools and universities promoting youth mental health awareness</li>
-      <li>Companies investing in employee mental wellness</li>
-      <li>Indigenous and rural communities needing culturally respectful care</li>
-    </ul>
-  </section>
+    <!-- Specialized Services -->
+    <section class="section specialized-services fade-up" aria-labelledby="special-title">
+      <h2 id="special-title">Inclusive Mental Health for All</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Indigenous Healing Dialogues</h3>
+          <p>Integrating traditional practices into modern care frameworks.</p>
+        </article>
+        <article class="card">
+          <h3>PWD Mental Health Services</h3>
+          <p>Tools and training for independence, coping strategies, and advocacy support.</p>
+        </article>
+        <article class="card">
+          <h3>Emergency Mental Health Response</h3>
+          <p>Psychological First Aid (PFA) training and 24/7 trauma-informed helplines for crisis support and referrals.</p>
+        </article>
+      </div>
+    </section>
 
-   <!-- Testimonials & Social Proof -->
-<section class="section testimonials fade-up" aria-labelledby="testimonials-title">
-  <h2 id="testimonials-title"><i class="fa fa-quote-left"></i> What Our Partners Are Saying</h2>
-    <div class="testimonials-cards">
+    <!-- Who We Serve -->
+    <section class="section who-we-serve fade-up" aria-labelledby="serve-title">
+      <h2 id="serve-title">Who We Serve</h2>
+      <ul>
+        <li>Individuals and families seeking affordable mental health care in the Philippines</li>
+        <li>Local governments and NGOs implementing community mental health programs</li>
+        <li>Schools and universities promoting youth mental health awareness</li>
+        <li>Companies investing in employee mental wellness</li>
+        <li>Indigenous and rural communities needing culturally respectful care</li>
+      </ul>
+    </section>
+
+    <!-- Testimonials & Social Proof -->
+    <section class="section testimonials fade-up" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title"><span class="fa fa-quote-left" aria-hidden="true"></span> What Our Partners Are Saying</h2>
+      <div class="testimonials-cards">
         <article class="testimonial">
           <img src="https://cognitio-plus.aiwaapp.live/cache/media_cache/320ff456ae69ff9d5cdcdd2eed3aea18.png" alt="Testimonial 1" width="100%" height="100%" loading="lazy" />
         </article>
         <article class="testimonial">
-      <img src="https://cognitio-plus.aiwaapp.live/cache/media_cache/d3120abd83acdf0295b82249d925fdfa.png" alt="Testimonial 2" width="100%" height="100%" loading="lazy" />
+          <img src="https://cognitio-plus.aiwaapp.live/cache/media_cache/d3120abd83acdf0295b82249d925fdfa.png" alt="Testimonial 2" width="100%" height="100%" loading="lazy" />
         </article>
         <article class="testimonial">
           <img src="https://cognitio-plus.aiwaapp.live/cache/media_cache/77860b799134318914556ebad1be2d48.png" alt="Testimonial 3" width="100%" height="100%" loading="lazy" />
@@ -208,24 +230,18 @@
       </div>
     </section>
 
-
-   <!-- COMMUNITY SECTION (Embed) -->
+    <!-- Community Section -->
     <section class="section community fade-up" aria-labelledby="community-title">
-      <h2 id="community-title"><i class="fa fa-users"></i> Our Community</h2>
-      <div style="position: relative; width: 100%; height: 0; padding-top: 66.6667%;
-        padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-        border-radius: 8px; will-change: transform;">
-        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-          src="https://www.canva.com/design/DAGhEtL2N4E/nBZgSnhhGUu9XUnfhRpDLw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-        </iframe>
+      <h2 id="community-title"><span class="fa fa-users" aria-hidden="true"></span> Our Community</h2>
+      <div style="position: relative; width: 100%; height: 0; padding-top: 66.67%; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1em; margin-bottom: 1em; overflow: hidden; border-radius: 8px;">
+        <iframe loading="lazy" title="Community Banner" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;" src="https://www.canva.com/design/DAGhEtL2N4E/nBZgSnhhGUu9XUnfhRpDLw/view?embed" allowfullscreen></iframe>
       </div>
-      <a href="https://www.canva.com/design/DAGhEtL2N4E/nBZgSnhhGUu9XUnfhRpDLw/view?utm_content=DAGhEtL2N4E&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Full Screen</a>
+      <a href="https://www.canva.com/design/DAGhEtL2N4E/nBZgSnhhGUu9XUnfhRpDLw/view?utm_content=DAGhEtL2N4E&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener">View on Canva</a>
     </section>
 
-
-      <!-- Stay Connected Section -->
+    <!-- Stay Connected Section -->
     <section class="section stay-connected fade-up" aria-labelledby="stay-connected-title">
-      <h2 id="stay-connected-title"><i class="fa fa-share-alt"></i> Stay Connected</h2>
+      <h2 id="stay-connected-title"><span class="fa fa-share-alt" aria-hidden="true"></span> Stay Connected</h2>
       <div class="section-flex">
         <div>
           <p>Subscribe to our newsletter for the latest on Filipino mental health innovations.</p>
@@ -242,7 +258,7 @@
 
     <!-- Contact Section with Validation -->
     <section class="section contact fade-up" aria-labelledby="contact-title">
-      <h2 id="contact-title"><i class="fa fa-envelope"></i> Contact Us</h2>
+      <h2 id="contact-title"><span class="fa fa-envelope" aria-hidden="true"></span> Contact Us</h2>
       <form id="contact-form" autocomplete="off" novalidate>
         <label for="contact-name">Name:</label>
         <input type="text" id="contact-name" name="name" required aria-required="true" />
@@ -255,33 +271,41 @@
       </form>
     </section>
 
-  <!-- Quick Well-Being Pulse Survey -->
-  <section class="section survey-form fade-up">
-    <h2>Quick Well-Being Pulse Survey</h2>
-    <form id="pulse-survey">
-      <label for="wellbeing-slider">How are you feeling today?</label>
-      <input type="range" min="1" max="5" value="3" id="wellbeing-slider" aria-label="Well-being level">
-      <button type="submit">Submit</button>
-    </form>
-    <p class="result" id="survey-result" role="status" aria-live="polite"></p>
-  </section>
+    <!-- Quick Well-Being Pulse Survey -->
+    <section class="section survey-form fade-up" aria-labelledby="survey-title">
+      <h2 id="survey-title">Quick Well-Being Pulse Survey</h2>
+      <form id="pulse-survey">
+        <label for="wellbeing-slider">How are you feeling today?</label>
+        <input type="range" min="1" max="5" value="3" id="wellbeing-slider" aria-label="Well-being level">
+        <button type="submit">Submit</button>
+      </form>
+      <p class="result" id="survey-result" role="status" aria-live="polite"></p>
+    </section>
+  </main>
 
-  <!-- Footer -->
-  <footer class="fade-up">
-    <iframe <div style="position: relative; width: 100%; height: 0; padding-top: 70.9459%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https://www.canva.com/design/DAGLftVu7Gs/W97wZXQVhQfcrTu7a7cRRw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGLftVu7Gs&#x2F;W97wZXQVhQfcrTu7a7cRRw&#x2F;view?utm_content=DAGLftVu7Gs&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">" title="Footer Banner"></iframe>
+  <footer class="fade-up" role="contentinfo">
+    <div style="position: relative; width: 100%; height: 0; padding-top: 70.95%; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1em; margin-bottom: 1em; overflow: hidden; border-radius: 8px;">
+      <iframe loading="lazy" title="Footer Banner" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;" src="https://www.canva.com/design/DAGLftVu7Gs/W97wZXQVhQfcrTu7a7cRRw/view?embed" allowfullscreen></iframe>
+    </div>
+    <a href="https://www.canva.com/design/DAGLftVu7Gs/W97wZXQVhQfcrTu7a7cRRw/view?utm_content=DAGLftVu7Gs&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener">View on Canva</a>
     <p>&copy; 2025 Cognitio+. All rights reserved.</p>
   </footer>
 
   <!-- Scripts -->
   <script src="script.js" defer></script>
-   
+
+  <!-- Service Worker Registration for PWA -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(function(reg) {
+          console.log('Service Worker registered!', reg);
+        }).catch(function(err) {
+          console.log('Service Worker registration failed: ', err);
+        });
+    }
+  </script>
+
   <!-- Responsive Navigation Toggle Script -->
   <script>
     const navToggle = document.querySelector('.nav-toggle');
@@ -292,6 +316,17 @@
       mainNav.classList.toggle('open');
     });
   </script>
+
+  <!-- Language Switcher Script (Internationalization Hook) -->
+  <script>
+    document.getElementById('lang-switcher').addEventListener('change', function() {
+      const lang = this.value;
+      document.documentElement.lang = lang;
+      // TODO: Integrate with i18n library or load translations dynamically.
+      alert('Language switching coming soon! Selected: ' + lang);
+    });
+  </script>
+
   <!-- Contact & Newsletter Form Validation -->
   <script>
     // Newsletter
@@ -320,6 +355,22 @@
       }
       status.textContent = 'Message sent! We will get back to you soon.';
       // You can add AJAX here to submit to your backend
+    });
+
+    // Pulse Survey
+    document.getElementById('pulse-survey').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const value = document.getElementById('wellbeing-slider').value;
+      const result = document.getElementById('survey-result');
+      let msg = '';
+      switch (Number(value)) {
+        case 1: msg = 'Hang in there. Consider reaching out for support.'; break;
+        case 2: msg = 'Things might be tough, but you’re not alone.'; break;
+        case 3: msg = 'You’re doing okay. Take some time for self-care.'; break;
+        case 4: msg = 'Great job! Keep up the positive habits.'; break;
+        case 5: msg = 'Fantastic! Spread your positivity to others.'; break;
+      }
+      result.textContent = msg;
     });
   </script>
 </body>
