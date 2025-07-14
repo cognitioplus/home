@@ -1,10 +1,10 @@
 const CACHE_NAME = "cognitio-booking-v1";
 const ASSETS_TO_CACHE = [
   "/",
-  "/index.html",
-  "/style.css",
-  "/script.js",
-  "/manifest.json",
+  "/booking.html",
+  "/booking-script.js",
+  "/booking-style.css",
+  "/booking-manifest.json",
   "/assets/icons/icon-192x192.png",
   "/assets/icons/icon-512x512.png"
 ];
