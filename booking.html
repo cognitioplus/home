@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking an Appointment | Cognitio +</title>
+    <title>Book an Appointment with Cognitio+</title>
     <meta name="description" content="Cognitio + | Your Partner in Resilience. Rooted in Culture. Powered by Technology.">
     <meta name="keywords" content="consultation, therapy, booking, resilience, psychosocial, Cognitio Plus">
     <meta name="author" content="Cognitio +">
@@ -33,39 +33,39 @@
             
             <!-- Section I: Personal Information -->
           <br>  
-					<fieldset>
+		<fieldset>
                 <legend>I. Personal Information</legend>
               <div>
-								<label for="fullName">Full Name* <span aria-hidden="true">*</span></label>
+		<label for="fullName">Full Name <span aria-hidden="true">*</span></label>
                 <input type="text" id="fullName" name="fullName" required aria-required="true" autocomplete="name" aria-describedby="fullNameHelp">
                 <span id="fullNameHelp" class="sr-only">Please enter your full name as shown on ne of your valid government issued ID.</span>
-							</div>  
-							<div>
-								<label for="email">Email Address* <span aria-hidden="true">*</span></label>
+		</div>  
+		<div>
+		<label for="email">Email Address <span aria-hidden="true">*</span></label>
                 <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" aria-describedby="emailHelp">
-                <span id="emailHelp" class="sr-only">We'll send booking details to this address.</span>
-							</div>
+                <span id="emailHelp" class="sr-only">We'll send booking details to this address </span>
+		</div>
                 <div>
-								<label for="phone">Phone Number* <span aria-hidden="true">*</span></label>
+		<label for="phone">Contact Number <span aria-hidden="true">*</span></label>
                 <input type="tel" id="phone" name="phone" required aria-required="true" autocomplete="tel" pattern="^\+?[0-9\s\-]{7,15}$" title="Please enter a valid phone number." placeholder="+63 912 345 6789" aria-describedby="phoneHelp">
                 <span id="phoneHelp" class="sr-only">Format: +Country Code Number</span>
-								</div>
+		</div>
                 <div>
-								<label for="dob">Date of Birth* <span aria-hidden="true">*</span></label>
+		<label for="dob">Date of Birth<span aria-hidden="true">*</span></label>
                 <input type="date" id="dob" name="dob" required aria-required="true" max="2020-01-01" aria-describedby="dobHelp">
                 <span id="dobHelp" class="sr-only">Use MM/DD/YYYY format.</span>
-								</div>
+		</div>
               <div> 
-							<label for="address">Complete Address*</label>
+		<label for="address">Complete Address</label>
                 <input type="text" id="address" name="address" required autocomplete="street-address">
             </fieldset>
-						</div>
-</br>
+	</div>
+	</br>
 
                         <!-- Area Type Dropdown -->
 					<br>	
 					<div> 
-						<label for="areaType">Area Type:</label>
+		<label for="areaType">Area Type:</label>
             <select id="areaType" name="areaType" aria-describedby="areaTypeHelp">
                 <option value="">Select Area Type</option>
                 <option value="huc">Highly Urbanized City (HUCs)</option>
@@ -76,11 +76,12 @@
 				</br>
 
             <!-- Vulnerable Population Segment Dropdown -->
-					<br>
-					<div>
-						<label for="vulnerableSegment">Vulnerable Population Segment:</label>
+	<br>
+	<div>
+	<label for="vulnerableSegment">Vulnerable Population Segment:</label>
             <select id="vulnerableSegment" name="vulnerableSegment" aria-describedby="vulnerableSegmentHelp">
-                <option value="">Select Segment</option>
+                <label value="">How do you consider yourself? Select one of these segments.<
+		</label>
                 <option value="student">Student</option>
                 <option value="school_leaver">School Leaver</option>
                 <option value="solo_parent">Solo Parent</option>
@@ -93,14 +94,14 @@
                 <option value="general_public">General Public</option>
             </select>
             <span id="vulnerableSegmentHelp" class="sr-only"></span>
-					</div>
+		</div>
             </br>
             
             <!-- Section II: Service Type -->
             <fieldset>
                 <legend>II. Service Type</legend>
               	<div>							
-								<label for="serviceType">Service* <span aria-hidden="true">*</span></label>
+		<label for="serviceType">Service<span aria-hidden="true">*</span></label>
                 <select id="serviceType" name="serviceType" required aria-required="true">
                     <option value="">Select a service</option>
                     <option value="consultation">Psychiatric Consultation</option>
@@ -126,61 +127,50 @@
             <fieldset>
                 <legend>IV. Appointment Date & Time</legend>
               <div>  
-							<label for="appointmentDate">Date* <span aria-hidden="true">*</span></label>
+		<label for="appointmentDate">Date <span aria-hidden="true">*</span></label>
                 <input type="date" id="appointmentDate" name="appointmentDate" required aria-required="true" min="">
                 </div>
-							<div>
-                <label for="appointmentTime">Time* <span aria-hidden="true">*</span></label>
+		<div>
+                <label for="appointmentTime">Time<span aria-hidden="true">*</span></label>
                 <input type="time" id="appointmentTime" name="appointmentTime" required aria-required="true">
-								 </div>
+	</div>
             </fieldset>
             
             <!-- Section V: Concerns -->
             <fieldset>
                 <legend>V. Briefly Describe Your Concerns</legend>
               <div>  
-							<label for="concerns">Your Concerns* <span aria-hidden="true">*</span></label>
+	<label for="concerns">Your Concerns <span aria-hidden="true">*</span></label>
                 <textarea id="concerns" name="concerns" required aria-required="true" placeholder="E.g. stress, anxiety, relationship, etc." aria-describedby="concernsHelp"></textarea>
                 <span id="concernsHelp" class="sr-only">Briefly describe what brings you to this session.</span>
-							</div>
-								
+	</div>					
             </fieldset>
             
             <!-- Section VI: Price Calculation -->
             <fieldset>
                 <legend>VI. Price Calculation</legend>
                 <p>
-									<div>
+		    <div>
                     <strong>Price Policy:</strong>  
-                    <br>Base price: ₱800 for the first hour.  
+                    <br>Base price: ₱899 for the first hour.  
                     <br>Additional minutes: ₱200 per 10 minutes.
                     <br><span id="discountInfo" aria-live="polite"></span>
-									</div>
+		</div>
                 </p>
-							<div>
+		<div>
                 <label for="calculatedPrice">Calculated Price</label>
                 <output id="calculatedPrice" name="calculatedPrice" for="duration" aria-live="polite">₱800.00</output>
-								</div>
-            </fieldset>
-            
-            <!-- Section VII: Goals for Consultation / Therapy -->
-            <fieldset>
-                <legend>VII. Goals for Consultation / Therapy</legend>
-							<div>
-                <label for="goals">Your Goals</label>
-                <textarea id="goals" name="goals" rows="3" placeholder="State your goals for this session (optional)"></textarea>
-							</div>
-            </fieldset>
+		</div>
+            </fieldset> 
             
             <!-- Section VIII: Consent & Policy Agreement -->
             <fieldset>
-							<div>
+		<div>
                 <legend>VIII. Consent & Policy Agreement</legend>
                 <input type="checkbox" id="consent" name="consent" required aria-required="true">
                 <label for="consent">
-        I consent to the collection and processing of my personal data in accordance with the <a             href="https://cognitio-plus.appimize.app/privacy-policy" target="_blank" rel="noopener               noreferrer">Privacy Policy </a> and <a href="https://cognitio-plus.appimize.app/terms-of-            services" target="_blank" rel="noopener noreferrer">Terms of Services</a>.
-            </label>
-							</div>
+I consent to the collection and processing of my personal data in accordance with the <href="https://cognitio-plus.appimize.app/privacy-policy" <'Privacy Policy'> and href="https://cognitio-plus.appimize.app/terms-of-services"><'Terms of Services'>
+            </label></div>
             </fieldset>
             
             <!-- Error Message -->
@@ -190,14 +180,13 @@
             <button type="submit" id="submitBtn">Book Now</button>
         </form>
     </main>
-
     <!-- Service Worker Registration -->
     <script>
-    if ('serviceWorker' in navigator) {
+    if ('booking-sw.js' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register("booking-sw.js")
+            navigator.booking-serviceWorker.register('booking-sw.js')
             .then(reg => {
-                console.log('Service Worker registered:', reg.scope);
+                console.log('Booking-Service Worker registered:', reg.scope);
             })
             .catch(err => {
                 document.getElementById('errorMsg').textContent = 
