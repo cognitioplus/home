@@ -10,24 +10,17 @@
   <meta name="author" content="Cognitio+" />
   <meta property="og:title" content="Cognitio+ Booking" />
   <meta property="og:description" content="Book your confidential consultation online." />
-  <meta property="og:image" content="https://appimize.app/assets/apps/user_1097/app_3046/draft/icon/app_logo.png?1752403490" />
   <meta property="og:url" content="https://cognitioplus.github.io/booking.html" />
-  <meta name="twitter:card" content="summary_large_image" />
 
   <!-- PWA -->
   <link rel="booking-manifest" href="booking-manifest.json" />
   <meta name="theme-color" content="#0077cc" />
-  <link rel="apple-touch-icon" href="https://appimize.app/assets/apps/user_1097/app_3046/draft/icon/app_logo.png?1752403490" />
-  <link rel="icon" href="https://appimize.app/assets/apps/user_1097/app_3046/draft/icon/app_logo.png?1752403490" sizes="32x32" />
-
   <!-- Styles -->
-  <style>
-  <link rel="booking-stylesheet" href="booking-styles.css"</style>
+  <style> href="booking-styles.css"</style>
 </head>
 <body>
 <header>
-  <img src="https://appimize.app/assets/apps/user_1097/app_3046/draft/icon/app_logo.png?1752403490" alt="Cognitio+ Logo" class="logo" />
-  <h1>Book Your Appointment</h1>
+  <h1></h1>
 </header>
 
 <main class="container">
@@ -128,7 +121,7 @@
 <script src="booking-script.js"></script>
 <script>
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('booking-service-worker.js')
+  navigator.serviceWorker.register('booking-sw.js')
     .then(() => console.log('✅ PWA ready'))
     .catch(console.error);
 }
