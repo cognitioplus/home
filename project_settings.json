@@ -1,0 +1,45 @@
+{
+    "theme":{
+        "color_class":"t1"
+    },
+    "widget_title":"P-Talk chat widget!",
+    "login_screen_contents":{
+        "heading":"Chat with us",
+        "sub_heading":"Fill the detail below to get started.",
+        "name":{
+            "label":"Full Name",
+            "placeholder":"Enter your name"
+        },
+        "email":{
+            "label":"Email",
+            "placeholder":"Enter your email"
+        },
+        "button":"Start now"
+    },
+    "offline_screen_contents":{
+        "heading":"Leave a message",
+        "sub_heading":"Sorry, we are away. Leave us a message and we'll get back to you.",
+        "name":{
+            "label":"Full Name",
+            "placeholder":"Enter your name"
+        },
+        "email":{
+            "label":"Email",
+            "placeholder":"Enter your email"
+        },
+        "message":{
+            "label":"Message",
+            "placeholder":"Enter your message"
+        },
+        "button":"Send"
+    },
+    "error_message":{
+        "err_msg":"Field can not be empty.",
+        "email_err_msg":"Email should be valid."
+    },
+    "widget" : {
+        "type":"bubble",
+        "text":"chat with us"
+    },
+    "position":"right"
+}
