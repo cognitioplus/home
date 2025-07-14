@@ -146,10 +146,10 @@
         function calculatePrice() {
             let duration = parseInt(durationInput.value, 10) || 60;
             let base = 800;
-            let extra = duration > 60 ? (duration - 60) * 200 : 0;
+            let extra = duration > 75 ? (duration - 75) * 200 : 0;
             let total = base + extra;
-            priceOutput.value = `$${total.toFixed(2)}`;
-            priceOutput.textContent = `$${total.toFixed(2)}`;
+            priceOutput.value = ` ₱{total.toFixed(2)}`;
+            priceOutput.textContent = `₱{total.toFixed(2)}`;
         }
         durationInput.addEventListener('input', calculatePrice);
         calculatePrice();
