@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking Consultation | Cognitio +</title>
-    <meta name="description" content="Book a consultation with Cognitio +, your partner in resilience. Rooted in culture. Powered by technology.">
-    <link rel="stylesheet" href="booking-styles.css">
-    <link rel="manifest" href="manifest.json">
+    <meta name="description" content="Cognitio + | Your Partner in Resilience. Rooted in Culture. Powered by Technology.">
+    <link rel="stylesheet" href="booking-style.css">
+    <link rel="manifest" href="booking-manifest.json">
     <link rel="icon" href="favicon.ico">
     <meta name="theme-color" content="#2a3142">
 </head>
 <body>
     <header>
-        <h1>Book a Consultation</h1>
+        <h1>Book an Appointment</h1>
         <nav>
             <a href="/">Home</a>
             <a href="/services.html">Services</a>
@@ -46,11 +46,12 @@
                 <legend>II. Service Type</legend>
                 <label for="serviceType">Service*</label>
                 <select id="serviceType" name="serviceType" required aria-required="true">
-                    <option value="">Select a service...</option>
-                    <option value="counseling">Individual Conultation</option>
-                    <option value="therapy">Therapy</option>
-                    <option value="workshop">Workshop</option>
-                    <option value="other">Other</option>
+                    <option value="">Select a service</option>
+                    <option value="consultation">Psychiatric Consultation</option>
+                    <option value="therapy">Talk Therapy</option>
+                    <option value="SPSS">Specialist Psychosocial Support</option>
+                    <option value="SPS Rehab">Specialist Psychosocial Rehab and Recovey Support</option>
+                    <option value="coaching">Resilience Coaching</option>
                 </select>
             </fieldset>
             
@@ -119,7 +120,7 @@
     <script>
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('booking-sw.js')
+            navigator.serviceWorker.register("booking-sw.js")
             .then(reg => {
                 console.log('Service Worker registered:', reg.scope);
             })
