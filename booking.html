@@ -61,20 +61,9 @@
     <label>Emergency Phone: <input type="tel" name="emergencyPhone"></label>
      </div>
      </br>
-    <br>
-    <h2>II. Appointment Details</h2>
-    <label>Date of Consultation: <input type="datetime-local" name="consultDate"></label>
-    <label>Referred by: <input type="text" name="referredBy"></label>
-    <label>Preferred Contact:
-      <select name="contactMethod">
-        <option>Phone</option>
-        <option>Email</option>
-        <option>Other</option>
-      </select>
-    </label>
     
-
-    <h2>III. Priority Concerns</h2>
+    <br>
+    <h2>II. Priority Concerns</h2>
     <label><input type="checkbox" name="concerns" value="Anxiety"> Anxiety</label>
     <label><input type="checkbox" name="concerns" value="Depression"> Depression</label>
     <label><input type="checkbox" name="concerns" value="Stress"> Stress</label>
@@ -84,20 +73,23 @@
     <label>Briefly describe your concerns:
       <textarea name="concernDescription"></textarea>
     </label>
-
-    <h2>IV. Mental Health & Medical History</h2>
+    </br>
+    <br>
+    <h2>III. Mental Health & Medical History</h2>
     <label>Previously seen a therapist? <input type="checkbox" name="historyTherapist"></label>
     <label>Current medications? <input type="checkbox" name="historyMeds"></label>
     <label>Hospitalizations? <input type="checkbox" name="historyHospital"></label>
     <label>Substance abuse history? <input type="checkbox" name="historySubstance"></label>
     <label>Medical conditions? <input type="checkbox" name="historyMedical"></label>
     <label>Family history of mental illness? <input type="checkbox" name="historyFamily"></label>
-
-    <h2>V. Risk & Safety Assessment</h2>
+    </br>
+    <br>
+    <h2>IV. Risk & Safety Assessment</h2>
     <label>Thoughts of harming self? <input type="checkbox" name="riskSelfHarm"></label>
     <label>Thoughts of harming others? <input type="checkbox" name="riskOtherHarm"></label>
     <label>Explain if yes: <textarea name="riskExplanation"></textarea></label>
-
+    </br>
+    <br>
     <h2>VI. Lifestyle & Support</h2>
     <label>Occupation / School: <input type="text" name="occupation"></label>
     <label>Living situation: 
@@ -109,11 +101,13 @@
     </label>
     <label>Support system: <input type="text" name="support"></label>
     <label>Coping strategies: <textarea name="coping"></textarea></label>
-
+    </br>
+    <br>
     <h2>VII. Goals for Consultation / Therapy</h2>
     <label><textarea name="goals"></textarea></label>
-      
-<h2>Appointment Details</h2>
+    </br>
+    <br>
+<h2>VII. Appointment Details</h2>
 <label>Date of Consultation: <input type="date" name="consultDate" required></label>
 <label>Preferred Time:
   <input type="time" name="consultTime" required>
@@ -125,16 +119,20 @@
     <option>Email</option>
     <option>Other</option>
   </select>
-</label>
+  </label>
+   </br>
     <label>
-    <h2>Dynamic Price</h2>
+  <br>
+  <h2>Dynamic Price</h2>
     <p>Calculated price: PHP <span id="price">0</span></p>
 </label>
-    <h2>VIII. Consent</h2>
+     </br>
+ <br>
+  <h2>VIII. Consent</h2>
     <label>
       <input type="checkbox" required> I acknowledge that information is accurate and consent to treatment.
     </label>
-
+    </br>
     <button type="submit">Submit Booking</button>
   </form>
 </main>
