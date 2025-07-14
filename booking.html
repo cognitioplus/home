@@ -48,27 +48,27 @@
             <fieldset>
                 <legend>I. Personal Information</legend>
                 <div>
-                    <label for="fullName">Full Name <span aria-hidden="true">*</span></label>
+                    <label for="fullName">Full Name <span aria-hidden="true"></span></label>
                     <input type="text" id="fullName" name="fullName" required aria-required="true" autocomplete="name" placeholder="e.g. Juan Dela Cruz" aria-describedby="fullNameHelp">
                     <span id="fullNameHelp" class="sr-only">Please enter your full name as shown on a valid government issued ID.</span>
                 </div>
                 <div>
-                    <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                    <label for="email">Email Address <span aria-hidden="true"></span></label>
                     <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" placeholder="e.g. juan@email.com" aria-describedby="emailHelp" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address.">
                     <span id="emailHelp" class="sr-only">We'll send booking details to this address.</span>
                 </div>
                 <div>
-                    <label for="phone">Contact Number <span aria-hidden="true">*</span></label>
+                    <label for="phone">Contact Number <span aria-hidden="true"></span></label>
                     <input type="tel" id="phone" name="phone" required aria-required="true" autocomplete="tel" pattern="^\+?[0-9\s\-]{7,15}$" title="Please enter a valid phone number." placeholder="+63 912 345 6789" aria-describedby="phoneHelp">
                     <span id="phoneHelp" class="sr-only">Format: +Country Code Number</span>
                 </div>
                 <div>
-                    <label for="dob">Date of Birth <span aria-hidden="true">*</span></label>
+                    <label for="dob">Date of Birth <span aria-hidden="true"></span></label>
                     <input type="date" id="dob" name="dob" required aria-required="true" aria-describedby="dobHelp" max="2020-01-01">
                     <span id="dobHelp" class="sr-only">Use MM/DD/YYYY format.</span>
                 </div>
                 <div>
-                    <label for="address">Complete Address <span aria-hidden="true">*</span></label>
+                    <label for="address">Complete Address <span aria-hidden="true"></span></label>
                     <input type="text" id="address" name="address" required autocomplete="street-address" placeholder="e.g. 123 Main St., Quezon City, Metro Manila" aria-describedby="addressHelp">
                     <span id="addressHelp" class="sr-only">Please enter your full address for location purposes.</span>
                 </div>
@@ -111,7 +111,7 @@
             <fieldset>
                 <legend>II. Service Type</legend>
                 <div>
-                    <label for="serviceType">Service <span aria-hidden="true">*</span></label>
+                    <label for="serviceType">Service <span aria-hidden="true"></span></label>
                     <select id="serviceType" name="serviceType" required aria-required="true">
                         <option value="">Select a service</option>
                         <option value="consultation">Psychiatric Consultation</option>
@@ -127,7 +127,7 @@
             <fieldset>
                 <legend>III. Session Duration</legend>
                 <div>
-                    <label for="duration">Duration (minutes) <span aria-hidden="true">*</span></label>
+                    <label for="duration">Duration (minutes) <span aria-hidden="true"></span></label>
                     <input type="number" id="duration" name="duration" required aria-required="true" min="30" max="180" step="15" value="60" aria-describedby="durationHelp">
                     <span id="durationHelp" class="sr-only">Session must be between 30 and 180 minutes.</span>
                 </div>
@@ -137,11 +137,11 @@
             <fieldset>
                 <legend>IV. Appointment Date & Time</legend>
                 <div>
-                    <label for="appointmentDate">Date <span aria-hidden="true">*</span></label>
+                    <label for="appointmentDate">Date <span aria-hidden="true"></span></label>
                     <input type="date" id="appointmentDate" name="appointmentDate" required aria-required="true" min="">
                 </div>
                 <div>
-                    <label for="appointmentTime">Time <span aria-hidden="true">*</span></label>
+                    <label for="appointmentTime">Time <span aria-hidden="true"></span></label>
                     <input type="time" id="appointmentTime" name="appointmentTime" required aria-required="true">
                 </div>
             </fieldset>
@@ -150,7 +150,7 @@
             <fieldset>
                 <legend>V. Briefly Describe Your Concerns</legend>
                 <div>
-                    <label for="concerns">Your Concerns <span aria-hidden="true">*</span></label>
+                    <label for="concerns">Your Concerns <span aria-hidden="true"></span></label>
                     <textarea id="concerns" name="concerns" required aria-required="true" placeholder="E.g. stress, anxiety, relationship, etc." aria-describedby="concernsHelp"></textarea>
                     <span id="concernsHelp" class="sr-only">Briefly describe what brings you to this session.</span>
                 </div>
