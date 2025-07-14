@@ -1,122 +1,44 @@
-// booking-script.js
-
 document.addEventListener('DOMContentLoaded', () => {
     const bookingForm = document.getElementById('bookingForm');
-    const priceOutput = document.getElementById('priceOutput');
-    const discountMsg = document.getElementById('discountMsg');
-    const errorMsg = document.getElementById('formError');
+    const priceOutput = document.getElementById('calculatedPrice');
+    const errorMsg = document.getElementById('errorMsg');
     const appointmentDate = document.getElementById('appointmentDate');
 
     // Set minimum appointment date to today
     appointmentDate.min = new Date().toISOString().split('T')[0];
 
     // Pricing configuration
-    const basePrices = {
-        standard: 100,
-        premium: 180,
-        deluxe: 250
-    };
+    const basePrice = 800;
+    const additionalPricePer10Min = 200;
 
-    const discountSegments = [
-        'student', 'elderly', 'lgbtq', 'veteran', 'disabled'
-    ];
-
-    const discountRate = 0.15; // 15% off for vulnerable segments
-    const subsidyRate = 0.10;  // 10% additional off if subsidy is checked
-
-    // Helper for debouncing
-    function debounce(func, delay) {
-        let timer;
-        return function (...args) {
-            clearTimeout(timer);
-            timer = setTimeout(() => func.apply(this, args), delay);
-        };
-    }
-
-    // Accessibility announcement
-    function announceAria(element, message) {
-        element.textContent = message;
-        element.setAttribute('aria-live', 'polite');
-    }
-
-    // Predict price based on time (simulated ML)
-    function predictPriceAdjustment(dateStr, timeStr) {
-        if (!dateStr || !timeStr) return 0;
-        const hour = parseInt(timeStr.split(':')[0], 10);
-        if (hour >= 6 && hour < 9) return -0.10; // Morning discount
-        if (hour >= 12 && hour < 14) return 0.15; // Lunch peak
-        if (hour >= 17 && hour < 20) return 0.20; // Evening rush
-        return 0;
-    }
-
-    // Calculate final price
-    function calculateFinalPrice() {
-        // Get form values
-        const serviceType = bookingForm.serviceType.value;
-        const vulnerableSegment = discountSegments.some(
-            seg => bookingForm[seg] && bookingForm[seg].checked
-        );
-        const isSubsidy = bookingForm.subsidy && bookingForm.subsidy.checked;
-        const appointmentDateVal = appointmentDate.value;
-        const appointmentTimeVal = bookingForm.appointmentTime.value;
-
-        let price = basePrices[serviceType] || basePrices.standard;
-        let discount = 0;
-        let messages = [];
-
-        // Segment discount
-        if (vulnerableSegment) {
-            discount += discountRate;
-            messages.push('Vulnerable segment discount applied.');
+    function calculatePrice() {
+        const duration = parseInt(document.getElementById('duration').value, 10) || 60;
+        let price = basePrice;
+        if (duration > 60) {
+            price += Math.ceil((duration - 60) / 10) * additionalPricePer10Min;
         }
-
-        // Subsidy discount
-        if (isSubsidy) {
-            discount += subsidyRate;
-            messages.push('Community subsidy applied.');
-        }
-
-        // ML time adjustment
-        const timeAdjustment = predictPriceAdjustment(appointmentDateVal, appointmentTimeVal);
-        if (timeAdjustment < 0) {
-            messages.push('Morning slot discount applied.');
-        } else if (timeAdjustment > 0) {
-            messages.push('Peak/rush hour adjustment applied.');
-        }
-
-        // Apply all adjustments
-        price = price * (1 - discount);
-        price += price * timeAdjustment;
-
-        // Output price, rounded to 2 decimals
-        priceOutput.textContent = `Estimated Price: $${price.toFixed(2)}`;
-        priceOutput.setAttribute('aria-live', 'polite');
-
-        // Show all messages for discounts
-        announceAria(discountMsg, messages.join(' '));
+        priceOutput.value = `₱${price.toFixed(2)}`;
+        priceOutput.textContent = `₱${price.toFixed(2)}`;
+        return price;
     }
 
-    // Validate form fields
+    bookingForm.addEventListener('input', calculatePrice);
+
     function validateForm() {
         let valid = true;
         errorMsg.textContent = '';
-        errorMsg.setAttribute('aria-live', 'polite');
+        Array.from(bookingForm.elements).forEach(el => el.classList.remove('error'));
 
-        // Remove previous error highlights
-        Array.from(bookingForm.elements).forEach(el => {
-            el.classList.remove('error');
-        });
-
-        // Required fields
         const requiredFields = [
-            'fullName', 'email', 'phone', 'serviceType', 'appointmentDate', 'appointmentTime'
+            'fullName', 'email', 'phone', 'address', 'dob', 'serviceType',
+            'duration', 'appointmentDate', 'appointmentTime', 'concerns', 'consent'
         ];
 
         for (const field of requiredFields) {
             const input = bookingForm[field];
-            if (!input || !input.value.trim()) {
+            if (!input || (input.type === "checkbox" ? !input.checked : !input.value.trim())) {
                 input.classList.add('error');
-                errorMsg.textContent = `Please fill out the ${input.getAttribute('aria-label') || field} field.`;
+                errorMsg.textContent = `Please fill out the ${field.replace(/([A-Z])/g, ' $1')}.`;
                 input.focus();
                 valid = false;
                 break;
@@ -135,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Phone validation
         const phone = bookingForm.phone.value.trim();
-        const phonePattern = /^\+?\d{7,15}$/;
+        const phonePattern = /^\+?[0-9\s\-]{7,15}$/;
         if (phone && !phonePattern.test(phone)) {
             bookingForm.phone.classList.add('error');
             errorMsg.textContent = 'Please enter a valid phone number.';
@@ -146,31 +68,48 @@ document.addEventListener('DOMContentLoaded', () => {
         return valid;
     }
 
-    // Debounced price calculation on input change
-    const debouncedPriceCalc = debounce(calculateFinalPrice, 250);
-
-    bookingForm.addEventListener('input', debouncedPriceCalc);
-
     bookingForm.addEventListener('submit', function (e) {
         e.preventDefault();
         if (validateForm()) {
             errorMsg.textContent = '';
-            bookingForm.reset();
-            priceOutput.textContent = '';
-            discountMsg.textContent = '';
-            announceAria(errorMsg, 'Booking submitted successfully!');
+
+            // Collect booking data
+            const bookingData = {
+                fullName: bookingForm.fullName.value,
+                email: bookingForm.email.value,
+                phone: bookingForm.phone.value,
+                address: bookingForm.address.value,
+                dob: bookingForm.dob.value,
+                vulnerableSegment: bookingForm.vulnerableSegment.value,
+                areaType: bookingForm.areaType.value,
+                serviceType: bookingForm.serviceType.value,
+                duration: bookingForm.duration.value,
+                appointmentDate: bookingForm.appointmentDate.value,
+                appointmentTime: bookingForm.appointmentTime.value,
+                concerns: bookingForm.concerns.value,
+                goals: bookingForm.goals.value,
+                calculatedPrice: priceOutput.textContent
+            };
+
+            // Send booking data to backend for email
+            fetch('/api/sendBookingEmail', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(bookingData)
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    errorMsg.textContent = 'Booking submitted and summary email sent!';
+                    bookingForm.reset();
+                    priceOutput.textContent = '₱800.00';
+                } else {
+                    errorMsg.textContent = 'Booking submitted, but email sending failed.';
+                }
+            })
+            .catch(err => {
+                errorMsg.textContent = 'Booking submitted, but there was an error sending email.';
+            });
         }
     });
-
-    // Animation for fade-in sections
-    const fadeIns = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    fadeIns.forEach(section => observer.observe(section));
 });
