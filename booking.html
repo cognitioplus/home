@@ -25,10 +25,18 @@
 
 <main class="container">
   <form id="bookingForm">
+    <br>
     <h2>I. Client Information</h2>
+    <div>
     <label>Full Name: <input type="text" name="fullName" required></label>
+    </div>
+    <div>
     <label>Date of Birth: <input type="date" name="dob" required></label>
+    </div>
+    <div>
     <label>Age: <input type="number" name="age" required></label>
+    </div>
+    <div>
     <label>Gender: 
       <select name="gender">
         <option>Male</option>
@@ -36,12 +44,24 @@
         <option>Other</option>
       </select>
     </label>
+    </div>
+    <div>
     <label>Address: <input type="text" name="address"></label>
+    </div>
+    <div>
     <label>Phone Number: <input type="tel" name="phone"></label>
+    </div>
+    <div>
     <label>Email: <input type="email" name="email"></label>
+    </div>
+    <div>
     <label>Emergency Contact: <input type="text" name="emergencyContact"></label>
+    </div>
+     <div>
     <label>Emergency Phone: <input type="tel" name="emergencyPhone"></label>
-
+     </div>
+     </br>
+    <br>
     <h2>II. Appointment Details</h2>
     <label>Date of Consultation: <input type="datetime-local" name="consultDate"></label>
     <label>Referred by: <input type="text" name="referredBy"></label>
@@ -52,8 +72,9 @@
         <option>Other</option>
       </select>
     </label>
+    
 
-    <h2>III. Presenting Concerns</h2>
+    <h2>III. Priority Concerns</h2>
     <label><input type="checkbox" name="concerns" value="Anxiety"> Anxiety</label>
     <label><input type="checkbox" name="concerns" value="Depression"> Depression</label>
     <label><input type="checkbox" name="concerns" value="Stress"> Stress</label>
