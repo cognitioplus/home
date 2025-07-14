@@ -40,6 +40,31 @@
                 <label for="dob">Date of Birth*</label>
                 <input type="date" id="dob" name="dob" required aria-required="true" max="2020-01-01">
             </fieldset>
+
+            <!-- Vulnerable Population Segment Dropdown -->
+  <label for="vulnerableSegment">Vulnerable Population Segment:</label>
+  <select id="vulnerableSegment" name="vulnerableSegment">
+    <option value="">Select Segment</option>
+    <option value="student">Student</option>
+    <option value="school_leaver">School Leaver</option>
+    <option value="solo_parent">Solo Parent</option>
+    <option value="elderly">Elderly</option>
+    <option value="pwd">PWD</option>
+    <option value="low_income_family">Low-income Family</option>
+    <option value="victims_of_disasters">Victims of Disasters</option>
+    <option value="informal_settler">Informal Settler</option>
+    <option value="lgbtq">LGBTQ+</option>
+  </select>
+  <br/>
+
+            <!-- Area Type Dropdown -->
+  <label for="areaType">Area Type:</label>
+  <select id="areaType" name="areaType">
+    <option value="">Select Area Type</option>
+    <option value="huc">Highly Urbanized City (HUCs)</option>
+    <option value="non_huc">Non HUCs</option>
+  </select>
+  <br/>
             
             <!-- Section II: Service Type -->
             <fieldset>
@@ -141,6 +166,38 @@
         document.getElementById('appointmentDate').setAttribute('min', today);
 
         // Dynamic price calculation
+       <script>
+function calculateTotalPrice() {
+  let basePrice = 1000; // Replace with your actual calculation or get from form
+  let totalPrice = basePrice;
+
+  // Check Vulnerable Population Segment
+  const vulnerableSegment = document.getElementById('vulnerableSegment').value;
+  const vulnerableSegments = [
+    'student', 'school_leaver', 'solo_parent', 'elderly', 'pwd', 
+    'low_income_family', 'victims_of_disasters', 'informal_settler', 'lgbtq'
+  ];
+
+  if (vulnerableSegments.includes(vulnerableSegment)) {
+    totalPrice *= 0.85; // Apply 15% discount
+  }
+
+  // Check Area Type
+  const areaType = document.getElementById('areaType').value;
+  if (areaType === 'huc') {
+    totalPrice *= 1.05; // Apply 5% increase
+  }
+
+  // Display result
+  document.getElementById('totalPrice').textContent = totalPrice.toFixed(2);
+}
+
+// Listen for changes
+document.getElementById('vulnerableSegment').addEventListener('change', calculateTotalPrice);
+document.getElementById('areaType').addEventListener('change', calculateTotalPrice);
+
+// Optionally, run on form submit or other relevant events
+</script>
         const durationInput = document.getElementById('duration');
         const priceOutput = document.getElementById('calculatedPrice');
         function calculatePrice() {
