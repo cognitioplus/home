@@ -1,60 +1,91 @@
+// app.js
 const express = require('express');
-const app = express();
 const path = require('path');
+const http = require('http');
+const socketio = require('socket.io');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const bodyParser = require('body-parser');
-var logger = require('morgan');
-http = require('http').createServer(app),
-io = require('socket.io')(http);
+const morgan = require('morgan');
+const app = express();
 
-// require routes
-var indexRouter = require('./routes/index');
-var dashboardRouter = require('./routes/dashboard');
-var projectRouter = require('./routes/projects');
-var operatorRouter = require('./routes/operators');
-var profileRouter = require('./routes/profile');
-var pixelRouter = require('./routes/pixeltalk');
-var scriptRouter = require('./routes/script');
+// Modular route imports
+const dashboardRouter = require('./routes/dashboard');
+const projectsRouter = require('./routes/projects');
+const operatorsRouter = require('./routes/operators');
+const profileRouter = require('./routes/profile');
+const pixeltalkRouter = require('./routes/pixeltalk');
+const scriptRouter = require('./routes/script');
+// Example: Add more routes here for new features
+// const resilienceRouter = require('./routes/resilience');
 
-// view engine setup
+// View engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(logger('dev'));
-app.use(cookieParser());
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({secret:'pixelTalk#123@',resave: false,saveUninitialized: true}));
+// Middleware
+app.use(morgan('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
+app.use(session({
+  secret: 'your-session-secret', // Use environment variable in production!
+  resave: false,
+  saveUninitialized: true,
+}));
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Add headers
-app.use(function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-	res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-	res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-	res.setHeader('Access-Control-Allow-Credentials', true);
-	next();
+// CORS headers for API and sockets
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*'); // Update for production
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
 });
 
-app.use('/', indexRouter);
+// Route mapping
+app.use('/', dashboardRouter);
 app.use('/dashboard', dashboardRouter);
-app.use('/projects', projectRouter);
-app.use('/operators', operatorRouter);
+app.use('/projects', projectsRouter);
+app.use('/operators', operatorsRouter);
 app.use('/profile', profileRouter);
-app.use('/pixaltalk', pixelRouter);
-app.use('/script',scriptRouter);
-/* catch 404 and forward to error handler */
-app.use(function(req, res, next) {
-//   next(createError(404));
-  res.render('error')
+app.use('/pixeltalk', pixeltalkRouter);
+app.use('/script', scriptRouter);
+// app.use('/resilience', resilienceRouter); // Example new feature
+
+// Error Handling
+app.use((req, res, next) => {
+  res.status(404).render('error', { message: 'Page Not Found' });
 });
 
-var port = 3302;
-http.listen(port, ()=>{
-    console.log('Listening to port '+port)
+// Socket.io integration
+const server = http.createServer(app);
+const io = socketio(server);
+
+// Socket.io events
+io.on('connection', (socket) => {
+  console.log('User connected:', socket.id);
+
+  // Chat feature
+  socket.on('chatMessage', (msg) => {
+    io.emit('chatMessage', msg); // Broadcast to all clients
+  });
+
+  // Resilience feature: broadcast status updates (example)
+  socket.on('statusUpdate', (data) => {
+    io.emit('statusUpdate', data); // All clients receive update
+  });
+
+  // Extend with more events as needed
+  socket.on('disconnect', () => {
+    console.log('User disconnected:', socket.id);
+  });
 });
-  
+
+// Server Listen
+const PORT = process.env.PORT || 3302;
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+// Export for testing or modular usage
 module.exports = app;
