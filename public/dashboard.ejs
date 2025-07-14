@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cognitio+ Dashboard</title>
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <header>
+    <h1>Cognitio+ | Resilience Dashboard</h1>
+    <nav>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/projects">Projects</a>
+      <a href="/operators">Operators</a>
+      <a href="/profile">Profile</a>
+      <a href="/pixeltalk">Chat</a>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="status">
+      <h2>Resilience Status</h2>
+      <div id="status-info">All systems operational</div>
+      <button onclick="sendStatusUpdate()">Send Status Update</button>
+    </section>
+    
+    <section id="chat">
+      <h2>Team Chat</h2>
+      <div id="messages"></div>
+      <input id="chatInput" type="text" placeholder="Type a message..." />
+      <button onclick="sendChat()">Send</button>
+    </section>
+  </main>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
+</body>
+</html>
