@@ -44,12 +44,25 @@
                 
                 <label for="phone">Phone Number* <span aria-hidden="true">*</span></label>
                 <input type="tel" id="phone" name="phone" required aria-required="true" autocomplete="tel" pattern="^\+?[0-9\s\-]{7,15}$" title="Please enter a valid phone number." placeholder="+63 912 345 6789" aria-describedby="phoneHelp">
-                <span id="phoneHelp" class="sr-only">Format: +CountryCode Number</span>
+                <span id="phoneHelp" class="sr-only">Format: +Country Code Number</span>
                 
                 <label for="dob">Date of Birth* <span aria-hidden="true">*</span></label>
                 <input type="date" id="dob" name="dob" required aria-required="true" max="2020-01-01" aria-describedby="dobHelp">
                 <span id="dobHelp" class="sr-only">Use MM/DD/YYYY format.</span>
+
+                label for="address">Complete Address*</label>
+                <input type="text" id="address" name="address" required autocomplete="street-address">
             </fieldset>
+
+                        <!-- Area Type Dropdown -->
+            <label for="areaType">Area Type:</label>
+            <select id="areaType" name="areaType" aria-describedby="areaTypeHelp">
+                <option value="">Select Area Type</option>
+                <option value="huc">Highly Urbanized City (HUCs)</option>
+                <option value="non_huc">Non HUCs</option>
+            </select>
+            <span id="areaTypeHelp" class="sr-only"></span>
+            <br/>
 
             <!-- Vulnerable Population Segment Dropdown -->
             <label for="vulnerableSegment">Vulnerable Population Segment:</label>
@@ -67,16 +80,6 @@
                 <option value="general_public">General Public</option>
             </select>
             <span id="vulnerableSegmentHelp" class="sr-only"></span>
-            <br/>
-
-            <!-- Area Type Dropdown -->
-            <label for="areaType">Area Type:</label>
-            <select id="areaType" name="areaType" aria-describedby="areaTypeHelp">
-                <option value="">Select Area Type</option>
-                <option value="huc">Highly Urbanized City (HUCs)</option>
-                <option value="non_huc">Non HUCs</option>
-            </select>
-            <span id="areaTypeHelp" class="sr-only"></span>
             <br/>
             
             <!-- Section II: Service Type -->
