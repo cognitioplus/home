@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking Consultation | Cognitio +</title>
     <meta name="description" content="Cognitio + | Your Partner in Resilience. Rooted in Culture. Powered by Technology.">
+    <meta name="keywords" content="consultation, therapy, booking, resilience, psychosocial, Cognitio Plus">
+    <meta name="author" content="Cognitio +">
     <link rel="stylesheet" href="booking-style.css">
     <link rel="manifest" href="booking-manifest.json">
     <link rel="icon" href="favicon.ico">
     <meta name="theme-color" content="#2a3142">
+    <!-- Structured data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Book Consultation - Cognitio +",
+      "description": "Book a resilience or therapy session with Cognitio +.",
+      "url": "https://cognitioplus.com/booking.html"
+    }
+    </script>
 </head>
 <body>
     <header>
@@ -22,56 +34,61 @@
             <!-- Section I: Personal Information -->
             <fieldset>
                 <legend>I. Personal Information</legend>
-                <label for="fullName">Full Name*</label>
-                <input type="text" id="fullName" name="fullName" required aria-required="true" autocomplete="name">
+                <label for="fullName">Full Name* <span aria-hidden="true">*</span></label>
+                <input type="text" id="fullName" name="fullName" required aria-required="true" autocomplete="name" aria-describedby="fullNameHelp">
+                <span id="fullNameHelp" class="sr-only">Please enter your full name as shown on your ID.</span>
                 
-                <label for="email">Email Address*</label>
-                <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
+                <label for="email">Email Address* <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" aria-describedby="emailHelp">
+                <span id="emailHelp" class="sr-only">We'll send booking details to this address.</span>
                 
-                <label for="phone">Phone Number*</label>
-                <input type="tel" id="phone" name="phone" required aria-required="true" autocomplete="tel" pattern="^\+?[0-9\s\-]{7,15}$" 
-                    title="Please enter a valid phone number.">
+                <label for="phone">Phone Number* <span aria-hidden="true">*</span></label>
+                <input type="tel" id="phone" name="phone" required aria-required="true" autocomplete="tel" pattern="^\+?[0-9\s\-]{7,15}$" title="Please enter a valid phone number." placeholder="+63 912 345 6789" aria-describedby="phoneHelp">
+                <span id="phoneHelp" class="sr-only">Format: +CountryCode Number</span>
                 
-                <label for="dob">Date of Birth*</label>
-                <input type="date" id="dob" name="dob" required aria-required="true" max="2020-01-01">
+                <label for="dob">Date of Birth* <span aria-hidden="true">*</span></label>
+                <input type="date" id="dob" name="dob" required aria-required="true" max="2020-01-01" aria-describedby="dobHelp">
+                <span id="dobHelp" class="sr-only">Use MM/DD/YYYY format.</span>
             </fieldset>
 
             <!-- Vulnerable Population Segment Dropdown -->
-  <label for="vulnerableSegment">Vulnerable Population Segment:</label>
-  <select id="vulnerableSegment" name="vulnerableSegment">
-    <option value="">Select Segment</option>
-    <option value="student">Student</option>
-    <option value="school_leaver">School Leaver</option>
-    <option value="solo_parent">Solo Parent</option>
-    <option value="elderly">Elderly</option>
-    <option value="pwd">PWD</option>
-    <option value="low_income_family">Low-income Family</option>
-    <option value="victims_of_disasters">Victims of Disasters</option>
-    <option value="informal_settler">Informal Settler</option>
-    <option value="lgbtq+">LGBTQ+</option>
-    <option value="general_public">General Public</option>
-  </select>
-  <br/>
+            <label for="vulnerableSegment">Vulnerable Population Segment:</label>
+            <select id="vulnerableSegment" name="vulnerableSegment" aria-describedby="vulnerableSegmentHelp">
+                <option value="">Select Segment</option>
+                <option value="student">Student</option>
+                <option value="school_leaver">School Leaver</option>
+                <option value="solo_parent">Solo Parent</option>
+                <option value="elderly">Elderly</option>
+                <option value="pwd">PWD</option>
+                <option value="low_income_family">Low-income Family</option>
+                <option value="victims_of_disasters">Victims of Disasters</option>
+                <option value="informal_settler">Informal Settler</option>
+                <option value="lgbtq+">LGBTQ+</option>
+                <option value="general_public">General Public</option>
+            </select>
+            <span id="vulnerableSegmentHelp" class="sr-only">Discounts may apply for some segments.</span>
+            <br/>
 
             <!-- Area Type Dropdown -->
-  <label for="areaType">Area Type:</label>
-  <select id="areaType" name="areaType">
-    <option value="">Select Area Type</option>
-    <option value="huc">Highly Urbanized City (HUCs)</option>
-    <option value="non_huc">Non HUCs</option>
-  </select>
-  <br/>
+            <label for="areaType">Area Type:</label>
+            <select id="areaType" name="areaType" aria-describedby="areaTypeHelp">
+                <option value="">Select Area Type</option>
+                <option value="huc">Highly Urbanized City (HUCs)</option>
+                <option value="non_huc">Non HUCs</option>
+            </select>
+            <span id="areaTypeHelp" class="sr-only">Prices may vary by area type.</span>
+            <br/>
             
             <!-- Section II: Service Type -->
             <fieldset>
                 <legend>II. Service Type</legend>
-                <label for="serviceType">Service*</label>
+                <label for="serviceType">Service* <span aria-hidden="true">*</span></label>
                 <select id="serviceType" name="serviceType" required aria-required="true">
                     <option value="">Select a service</option>
                     <option value="consultation">Psychiatric Consultation</option>
                     <option value="therapy">Talk Therapy</option>
                     <option value="SPSS">Specialist Psychosocial Support</option>
-                    <option value="SPS Rehab">Specialist Psychosocial Rehab and Recovey Support</option>
+                    <option value="SPS Rehab">Specialist Psychosocial Rehab and Recovery Support</option>
                     <option value="coaching">Resilience Coaching</option>
                 </select>
             </fieldset>
@@ -79,25 +96,27 @@
             <!-- Section III: Session Duration -->
             <fieldset>
                 <legend>III. Session Duration</legend>
-                <label for="duration">Duration (minutes)*</label>
-                <input type="number" id="duration" name="duration" required aria-required="true" min="30" max="180" step="15" value="60">
+                <label for="duration">Duration (minutes)* <span aria-hidden="true">*</span></label>
+                <input type="number" id="duration" name="duration" required aria-required="true" min="30" max="180" step="15" value="60" aria-describedby="durationHelp">
+                <span id="durationHelp" class="sr-only">Session must be between 30 and 180 minutes.</span>
             </fieldset>
             
             <!-- Section IV: Date & Time -->
             <fieldset>
                 <legend>IV. Appointment Date & Time</legend>
-                <label for="appointmentDate">Date*</label>
+                <label for="appointmentDate">Date* <span aria-hidden="true">*</span></label>
                 <input type="date" id="appointmentDate" name="appointmentDate" required aria-required="true" min="">
                 
-                <label for="appointmentTime">Time*</label>
+                <label for="appointmentTime">Time* <span aria-hidden="true">*</span></label>
                 <input type="time" id="appointmentTime" name="appointmentTime" required aria-required="true">
             </fieldset>
             
             <!-- Section V: Concerns -->
             <fieldset>
                 <legend>V. Briefly Describe Your Concerns</legend>
-                <label for="concerns">Your Concerns*</label>
-                <textarea id="concerns" name="concerns" required aria-required="true" placeholder="E.g. stress, anxiety, relationship, etc."></textarea>
+                <label for="concerns">Your Concerns* <span aria-hidden="true">*</span></label>
+                <textarea id="concerns" name="concerns" required aria-required="true" placeholder="E.g. stress, anxiety, relationship, etc." aria-describedby="concernsHelp"></textarea>
+                <span id="concernsHelp" class="sr-only">Briefly describe what brings you to this session.</span>
             </fieldset>
             
             <!-- Section VI: Price Calculation -->
@@ -107,9 +126,10 @@
                     <strong>Price Policy:</strong>  
                     <br>Base price: ₱800 for the first hour.  
                     <br>Additional minutes: ₱200 per minute.
+                    <br><span id="discountInfo" aria-live="polite"></span>
                 </p>
                 <label for="calculatedPrice">Calculated Price</label>
-                <output id="calculatedPrice" name="calculatedPrice" for="duration">₱800</output>
+                <output id="calculatedPrice" name="calculatedPrice" for="duration" aria-live="polite">₱800.00</output>
             </fieldset>
             
             <!-- Section VII: Goals for Consultation / Therapy -->
@@ -125,7 +145,7 @@
                 <input type="checkbox" id="consent" name="consent" required aria-required="true">
                 <label for="consent">
                     I consent to the collection and processing of my personal data in accordance with the
-                    <a href="/privacy-policy.html" target="_blank">Privacy Policy</a> and <a href="/terms.html" target="_blank">Terms of Service</a>.
+                    <a href="/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="/terms.html" target="_blank" rel="noopener noreferrer">Terms of Service</a>.
                 </label>
             </fieldset>
             
@@ -153,61 +173,59 @@
         });
     }
     </script>
-  
+   
     <!-- Dynamic Price Calculation & Form Validation -->
     <script>
-    // Set min date for appointment (today)
+    // Accessibility and usability improvement: Set min date for appointment (today)
     document.addEventListener('DOMContentLoaded', () => {
         const today = new Date().toISOString().split('T')[0];
         document.getElementById('appointmentDate').setAttribute('min', today);
 
-        // Dynamic price calculation
-       <script>
-function calculateTotalPrice() {
-  let basePrice = 1000; // Replace with your actual calculation or get from form
-  let totalPrice = basePrice;
-
-  // Check Vulnerable Population Segment
-  const vulnerableSegment = document.getElementById('vulnerableSegment').value;
-  const vulnerableSegments = [
-    'student', 'school_leaver', 'solo_parent', 'elderly', 'pwd', 
-    'low_income_family', 'victims_of_disasters', 'informal_settler', 'lgbtq'
-  ];
-
-  if (vulnerableSegments.includes(vulnerableSegment)) {
-    totalPrice *= 0.85; // Apply 15% discount
-  }
-
-  // Check Area Type
-  const areaType = document.getElementById('areaType').value;
-  if (areaType === 'huc') {
-    totalPrice *= 1.05; // Apply 5% increase
-  }
-
-  // Display result
-  document.getElementById('totalPrice').textContent = totalPrice.toFixed(2);
-}
-
-// Listen for changes
-document.getElementById('vulnerableSegment').addEventListener('change', calculateTotalPrice);
-document.getElementById('areaType').addEventListener('change', calculateTotalPrice);
-
-// Optionally, run on form submit or other relevant events
-</script>
+        // Dynamic price calculation (refactored and unified logic)
         const durationInput = document.getElementById('duration');
         const priceOutput = document.getElementById('calculatedPrice');
+        const vulnerableSegmentInput = document.getElementById('vulnerableSegment');
+        const areaTypeInput = document.getElementById('areaType');
+        const discountInfo = document.getElementById('discountInfo');
+
         function calculatePrice() {
             let duration = parseInt(durationInput.value, 10) || 60;
             let base = 800;
-            let extra = duration > 75 ? (duration - 75) * 200 : 0;
+            let extra = duration > 60 ? (duration - 60) * 200 : 0;
             let total = base + extra;
-            priceOutput.value = ` ₱{total.toFixed(2)}`;
-            priceOutput.textContent = `₱{total.toFixed(2)}`;
+            let discountNotice = '';
+
+            // Vulnerable segment discount
+            const vulnerableSegments = [
+                'student', 'school_leaver', 'solo_parent', 'elderly', 'pwd',
+                'low_income_family', 'victims_of_disasters', 'informal_settler', 'lgbtq+'
+            ];
+            let vulnerableSegment = vulnerableSegmentInput.value;
+            if (vulnerableSegments.includes(vulnerableSegment)) {
+                total *= 0.85; // 15% discount
+                discountNotice += '15% discount applied for selected segment. ';
+            }
+
+            // Area type price adjustment
+            if (areaTypeInput.value === 'huc') {
+                total *= 1.05; // 5% increase
+                discountNotice += '5% price increase for HUC area.';
+            }
+
+            // Accessibility: update discount info with aria-live
+            discountInfo.textContent = discountNotice;
+
+            // Output price, accessible and visible
+            priceOutput.value = `₱${total.toFixed(2)}`;
+            priceOutput.textContent = `₱${total.toFixed(2)}`;
         }
+
         durationInput.addEventListener('input', calculatePrice);
+        vulnerableSegmentInput.addEventListener('change', calculatePrice);
+        areaTypeInput.addEventListener('change', calculatePrice);
         calculatePrice();
 
-        // Form validation
+        // Form validation with inline feedback
         const bookingForm = document.getElementById('bookingForm');
         bookingForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -216,8 +234,8 @@ document.getElementById('areaType').addEventListener('change', calculateTotalPri
 
             // Required fields
             const requiredFields = [
-                'fullName', 'email', 'phone', 'dob', 
-                'serviceType', 'duration', 'appointmentDate', 
+                'fullName', 'email', 'phone', 'dob',
+                'serviceType', 'duration', 'appointmentDate',
                 'appointmentTime', 'concerns', 'consent'
             ];
             requiredFields.forEach(fieldId => {
@@ -245,12 +263,14 @@ document.getElementById('areaType').addEventListener('change', calculateTotalPri
                 errorMsg = 'Please enter a valid phone number.';
             }
 
+            // Visual feedback for errors
             if (!valid) {
                 document.getElementById('errorMsg').textContent = errorMsg;
+                document.getElementById('errorMsg').focus();
                 return;
             }
 
-            // If valid, submit (simulate submission here)
+            // Clear errors and simulate submission
             document.getElementById('errorMsg').textContent = '';
             bookingForm.reset();
             calculatePrice();
