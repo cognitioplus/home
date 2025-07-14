@@ -1,149 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cognitio+ | Booking & Consultation</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Confidential mental health booking form, powered by Cognitio+ AI and community-based care." />
-  <meta name="author" content="Cognitio+" />
-  <meta property="og:title" content="Cognitio+ Booking" />
-  <meta property="og:description" content="Book your confidential consultation online." />
-  <meta property="og:url" content="https://cognitioplus.github.io/booking.html" />
-
-  <!-- PWA -->
-  <link rel="booking-manifest" href="booking-manifest.json" />
-  <meta name="theme-color" content="#0077cc" />
-  <!-- Styles -->
-  <style> href="booking-styles.css"</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Consultation | Cognitio +</title>
+    <meta name="description" content="Book a consultation with Cognitio +, your partner in resilience. Rooted in culture. Powered by technology.">
+    <link rel="stylesheet" href="booking-styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="favicon.ico">
+    <meta name="theme-color" content="#2a3142">
 </head>
 <body>
-<header>
-  <h1></h1>
-</header>
+    <header>
+        <h1>Book a Consultation</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/services.html">Services</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </header>
 
-<main class="container">
-  <form id="bookingForm">
-    <br>
-    <h2>I. Client Information</h2>
-    <div>
-    <label>Full Name: <input type="text" name="fullName" required></label>
-    </div>
-    <div>
-    <label>Date of Birth: <input type="date" name="dob" required></label>
-    </div>
-    <div>
-    <label>Age: <input type="number" name="age" required></label>
-    </div>
-    <div>
-    <label>Gender: 
-      <select name="gender">
-        <option>Male</option>
-        <option>Female</option>
-        <option>Other</option>
-      </select>
-    </label>
-    </div>
-    <div>
-    <label>Address: <input type="text" name="address"></label>
-    </div>
-    <div>
-    <label>Phone Number: <input type="tel" name="phone"></label>
-    </div>
-    <div>
-    <label>Email: <input type="email" name="email"></label>
-    </div>
-    <div>
-    <label>Emergency Contact: <input type="text" name="emergencyContact"></label>
-    </div>
-     <div>
-    <label>Emergency Phone: <input type="tel" name="emergencyPhone"></label>
-     </div>
-     </br>
-    
-    <br>
-    <h2>II. Priority Concerns</h2>
-    <label><input type="checkbox" name="concerns" value="Anxiety"> Anxiety</label>
-    <label><input type="checkbox" name="concerns" value="Depression"> Depression</label>
-    <label><input type="checkbox" name="concerns" value="Stress"> Stress</label>
-    <label><input type="checkbox" name="concerns" value="Substance use"> Substance use</label>
-    <label><input type="checkbox" name="concerns" value="Relationship issues"> Relationship issues</label>
-    <label><input type="checkbox" name="concerns" value="Other"> Other</label>
-    <label>Briefly describe your concerns:
-      <textarea name="concernDescription"></textarea>
-    </label>
-    </br>
-    <br>
-    <h2>III. Mental Health & Medical History</h2>
-    <label>Previously seen a therapist? <input type="checkbox" name="historyTherapist"></label>
-    <label>Current medications? <input type="checkbox" name="historyMeds"></label>
-    <label>Hospitalizations? <input type="checkbox" name="historyHospital"></label>
-    <label>Substance abuse history? <input type="checkbox" name="historySubstance"></label>
-    <label>Medical conditions? <input type="checkbox" name="historyMedical"></label>
-    <label>Family history of mental illness? <input type="checkbox" name="historyFamily"></label>
-    </br>
-    <br>
-    <h2>IV. Risk & Safety Assessment</h2>
-    <label>Thoughts of harming self? <input type="checkbox" name="riskSelfHarm"></label>
-    <label>Thoughts of harming others? <input type="checkbox" name="riskOtherHarm"></label>
-    <label>Explain if yes: <textarea name="riskExplanation"></textarea></label>
-    </br>
-    <br>
-    <h2>VI. Lifestyle & Support</h2>
-    <label>Occupation / School: <input type="text" name="occupation"></label>
-    <label>Living situation: 
-      <select name="livingSituation">
-        <option>Alone</option>
-        <option>With family</option>
-        <option>With partner/roommates</option>
-      </select>
-    </label>
-    <label>Support system: <input type="text" name="support"></label>
-    <label>Coping strategies: <textarea name="coping"></textarea></label>
-    </br>
-    <br>
-    <h2>VII. Goals for Consultation / Therapy</h2>
-    <label><textarea name="goals"></textarea></label>
-    </br>
-    <br>
-<h2>VII. Appointment Details</h2>
-<label>Date of Consultation: <input type="date" name="consultDate" required></label>
-<label>Preferred Time:
-  <input type="time" name="consultTime" required>
-</label>
-<label>Referred by: <input type="text" name="referredBy"></label>
-<label>Preferred Contact:
-  <select name="contactMethod">
-    <option>Phone</option>
-    <option>Email</option>
-    <option>Other</option>
-  </select>
-  </label>
-   </br>
-    <label>
-  <br>
-  <h2>Dynamic Price</h2>
-    <p>Calculated price: PHP <span id="price">0</span></p>
-</label>
-     </br>
- <br>
-  <h2>VIII. Consent</h2>
-    <label>
-      <input type="checkbox" required> I acknowledge that information is accurate and consent to treatment.
-    </label>
-    </br>
-    <button type="submit">Submit Booking</button>
-  </form>
-</main>
+    <main>
+        <form id="bookingForm" aria-labelledby="bookingFormTitle" autocomplete="on" novalidate>
+            <h2 id="bookingFormTitle">Booking Form</h2>
+            
+            <!-- Section I: Personal Information -->
+            <fieldset>
+                <legend>I. Personal Information</legend>
+                <label for="fullName">Full Name*</label>
+                <input type="text" id="fullName" name="fullName" required aria-required="true" autocomplete="name">
+                
+                <label for="email">Email Address*</label>
+                <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
+                
+                <label for="phone">Phone Number*</label>
+                <input type="tel" id="phone" name="phone" required aria-required="true" autocomplete="tel" pattern="^\+?[0-9\s\-]{7,15}$" 
+                    title="Please enter a valid phone number.">
+                
+                <label for="dob">Date of Birth*</label>
+                <input type="date" id="dob" name="dob" required aria-required="true" max="2020-01-01">
+            </fieldset>
+            
+            <!-- Section II: Service Type -->
+            <fieldset>
+                <legend>II. Service Type</legend>
+                <label for="serviceType">Service*</label>
+                <select id="serviceType" name="serviceType" required aria-required="true">
+                    <option value="">Select a service...</option>
+                    <option value="counseling">Individual Conultation</option>
+                    <option value="therapy">Therapy</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="other">Other</option>
+                </select>
+            </fieldset>
+            
+            <!-- Section III: Session Duration -->
+            <fieldset>
+                <legend>III. Session Duration</legend>
+                <label for="duration">Duration (minutes)*</label>
+                <input type="number" id="duration" name="duration" required aria-required="true" min="30" max="180" step="15" value="60">
+            </fieldset>
+            
+            <!-- Section IV: Date & Time -->
+            <fieldset>
+                <legend>IV. Appointment Date & Time</legend>
+                <label for="appointmentDate">Date*</label>
+                <input type="date" id="appointmentDate" name="appointmentDate" required aria-required="true" min="">
+                
+                <label for="appointmentTime">Time*</label>
+                <input type="time" id="appointmentTime" name="appointmentTime" required aria-required="true">
+            </fieldset>
+            
+            <!-- Section V: Concerns -->
+            <fieldset>
+                <legend>V. Briefly Describe Your Concerns</legend>
+                <label for="concerns">Your Concerns*</label>
+                <textarea id="concerns" name="concerns" required aria-required="true" placeholder="E.g. stress, anxiety, relationship, etc."></textarea>
+            </fieldset>
+            
+            <!-- Section VI: Price Calculation -->
+            <fieldset>
+                <legend>VI. Price Calculation</legend>
+                <p>
+                    <strong>Price Policy:</strong>  
+                    <br>Base price: ₱800 for the first hour.  
+                    <br>Additional minutes: ₱200 per minute.
+                </p>
+                <label for="calculatedPrice">Calculated Price</label>
+                <output id="calculatedPrice" name="calculatedPrice" for="duration">₱800</output>
+            </fieldset>
+            
+            <!-- Section VII: Goals for Consultation / Therapy -->
+            <fieldset>
+                <legend>VII. Goals for Consultation / Therapy</legend>
+                <label for="goals">Your Goals</label>
+                <textarea id="goals" name="goals" rows="3" placeholder="State your goals for this session (optional)"></textarea>
+            </fieldset>
+            
+            <!-- Section VIII: Consent & Policy Agreement -->
+            <fieldset>
+                <legend>VIII. Consent & Policy Agreement</legend>
+                <input type="checkbox" id="consent" name="consent" required aria-required="true">
+                <label for="consent">
+                    I consent to the collection and processing of my personal data in accordance with the
+                    <a href="/privacy-policy.html" target="_blank">Privacy Policy</a> and <a href="/terms.html" target="_blank">Terms of Service</a>.
+                </label>
+            </fieldset>
+            
+            <!-- Error Message -->
+            <div id="errorMsg" role="alert" aria-live="assertive"></div>
+            
+            <!-- Submit Button -->
+            <button type="submit" id="submitBtn">Book Now</button>
+        </form>
+    </main>
 
-<script src="booking-script.js"></script>
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('booking-sw.js')
-    .then(() => console.log('✅ PWA ready'))
-    .catch(console.error);
-}
-</script>
+    <!-- Service Worker Registration -->
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('booking-sw.js')
+            .then(reg => {
+                console.log('Service Worker registered:', reg.scope);
+            })
+            .catch(err => {
+                document.getElementById('errorMsg').textContent = 
+                    'Offline features are unavailable: Service Worker registration failed.';
+                console.error('Service Worker registration failed:', err);
+            });
+        });
+    }
+    </script>
+  
+    <!-- Dynamic Price Calculation & Form Validation -->
+    <script>
+    // Set min date for appointment (today)
+    document.addEventListener('DOMContentLoaded', () => {
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('appointmentDate').setAttribute('min', today);
+
+        // Dynamic price calculation
+        const durationInput = document.getElementById('duration');
+        const priceOutput = document.getElementById('calculatedPrice');
+        function calculatePrice() {
+            let duration = parseInt(durationInput.value, 10) || 60;
+            let base = 800;
+            let extra = duration > 60 ? (duration - 60) * 200 : 0;
+            let total = base + extra;
+            priceOutput.value = `$${total.toFixed(2)}`;
+            priceOutput.textContent = `$${total.toFixed(2)}`;
+        }
+        durationInput.addEventListener('input', calculatePrice);
+        calculatePrice();
+
+        // Form validation
+        const bookingForm = document.getElementById('bookingForm');
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let valid = true;
+            let errorMsg = '';
+
+            // Required fields
+            const requiredFields = [
+                'fullName', 'email', 'phone', 'dob', 
+                'serviceType', 'duration', 'appointmentDate', 
+                'appointmentTime', 'concerns', 'consent'
+            ];
+            requiredFields.forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                if (field.type === 'checkbox' && !field.checked) {
+                    valid = false;
+                    errorMsg = 'Please agree to the consent and policy.';
+                } else if (!field.value) {
+                    valid = false;
+                    errorMsg = 'Please fill out all required fields.';
+                }
+            });
+
+            // Email validation
+            const email = document.getElementById('email').value;
+            if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                valid = false;
+                errorMsg = 'Please enter a valid email address.';
+            }
+
+            // Phone validation
+            const phone = document.getElementById('phone').value;
+            if (phone && !/^\+?[0-9\s\-]{7,15}$/.test(phone)) {
+                valid = false;
+                errorMsg = 'Please enter a valid phone number.';
+            }
+
+            if (!valid) {
+                document.getElementById('errorMsg').textContent = errorMsg;
+                return;
+            }
+
+            // If valid, submit (simulate submission here)
+            document.getElementById('errorMsg').textContent = '';
+            bookingForm.reset();
+            calculatePrice();
+            alert('Your appointment has been booked! We will contact you soon.');
+        });
+    });
+    </script>
 </body>
 </html>
