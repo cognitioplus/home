@@ -30,8 +30,18 @@
     <main>
         <form id="bookingForm" aria-labelledby="bookingFormTitle" autocomplete="on" novalidate>
             <h2 id="bookingFormTitle">Booking Form</h2>
+
+		
             
-            <!-- Section I: Personal Information -->
+            <!-- Section I: Personal Information --><!-- Section VIII: Consent & Policy Agreement -->
+            <fieldset>
+		<div>
+                <legend>Consent & Policy Agreement</legend>
+                <input type="checkbox" id="consent" name="consent" required aria-required="true">
+                <label for="consent"> <p>I understand and consent to the collection, use, and processing of my personal data for booking purposes, in compliance with the 
+  <a href="https://cognitio-plus.appimize.app/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="https://cognitio-plus.appimize.app/terms-of-services" target="_blank" rel="noopener noreferrer">Terms of Service</a>.</p>.
+            </label></div>
+            </fieldset>
           <br>  
 		<fieldset>
                 <legend>I. Personal Information</legend>
@@ -160,19 +170,10 @@
                 </p>
 		<div>
                 <label for="calculatedPrice">Calculated Price</label>
-                <output id="calculatedPrice" name="calculatedPrice" for="duration" aria-live="polite">₱800.00</output>
+                <output id="calculatedPrice" name="calculatedPrice" for="duration" aria-live="polite">₱899.00</output>
 		</div>
             </fieldset> 
             
-            <!-- Section VIII: Consent & Policy Agreement -->
-            <fieldset>
-		<div>
-                <legend>VIII. Consent & Policy Agreement</legend>
-                <input type="checkbox" id="consent" name="consent" required aria-required="true">
-                <label for="consent"> <p>I understand and consent to the collection, use, and processing of my personal data for booking purposes, in compliance with the 
-  <a href="https://cognitio-plus.appimize.app/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="https://cognitio-plus.appimize.app/terms-of-services" target="_blank" rel="noopener noreferrer">Terms of Service</a>.</p>.
-            </label></div>
-            </fieldset>
             
             <!-- Error Message -->
             <div id="errorMsg" role="alert" aria-live="assertive"></div>
@@ -181,8 +182,12 @@
             <button type="submit" id="submitBtn">Book Now</button>
         </form>
     </main>
-    <!-- Service Worker Registration -->
-    <script>
+    
+</body>
+</html>
+<script> <link rel="booking-script.js"></script>    
+<!-- Service Worker Registration -->
+ <script>
     if ('booking-sw.js' in navigator) {
         window.addEventListener('load', () => {
             navigator.booking-serviceWorker.register('booking-sw.js')
@@ -194,8 +199,4 @@
                     'Offline features are unavailable: Service Worker registration failed.';
                 console.error('Service Worker registration failed:', err);
             });
-        });
-    }
-    </script>
-</body>
-</html>
+});
