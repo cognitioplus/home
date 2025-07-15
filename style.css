@@ -1,4 +1,5 @@
-/* Root Variables */
+
+/* General Styles */
 :root {
   --color-primary: #a451a9;
   --color-accent: #FFB81C;
@@ -10,10 +11,91 @@
   --font-heading: 'Oswald', Arial, sans-serif;
 }
 
+/* Accessibility Improvements */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    text-decoration: underline;
+}
+button, input, select, textarea {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+button:focus, input:focus, select:focus, textarea:focus {
+    outline: 2px solid #007bff;
+}
+
+/* Responsive Design */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5rem;
+}
+.col {
+    flex: 1;
+    padding: 0.5rem;
+}
+@media (max-width: 768px) {
+    .col {
+        flex: 100%;
+    }
+}
+
+
+/* Header Styles */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem;
+}
+nav a {
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+
+    color: #fff;
+    margin: 0 0.5rem;
+}
+nav a:hover {
+    color: #007bff;
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem 0;
+}
+main h2 {
+    color: #007bff;
+}
+main p {
+    margin-bottom: 1rem;
 }
 
 body {
@@ -23,12 +105,26 @@ body {
   line-height: 1.6;
 }
 
-header,
+/* Footer Styles */
 footer {
-  background-color: var(--color-primary);
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+footer p {
+    margin: 0;
+}
+
+/* Dynamic Elements */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
 }
 
 h1, h2, h3 {
@@ -69,10 +165,6 @@ iframe {
   border-radius: 8px;
 }
 
-.survey-form input[type="range"] {
-  width: 100%;
-}
-
 .fade-up {
   opacity: 0;
   transform: translateY(20px);
@@ -82,4 +174,25 @@ iframe {
 .fade-up.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Forms */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+.mt-1 {
+    margin-top: 1rem;
+}
+.mb-1 {
+    margin-bottom: 1rem;
 }
