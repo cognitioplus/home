@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Well-Being Pulse Survey</title>
+  <style>
+    :root {
+      --primary-color: #a451a9;
+      --accent-color: #FFB81C;
+      --text-color: #222;
+      --bg-color: #fff;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .modal-content {
+      background-color: var(--bg-color);
+      margin: 10% auto;
+      padding: 2rem;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      position: relative;
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    .modal-header h2 {
+      margin: 0;
+      color: var(--primary-color);
+    }
+
+    .modal-body {
+      margin: 1.5rem 0;
+      color: var(--text-color);
+    }
+
+    .modal-footer {
+      text-align: right;
+    }
+
+    .modal-footer a {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .modal-footer a:hover {
+      background-color: #8b3fa3;
+    }
+
+    .close-btn {
+      color: #aaa;
+      float: right;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close-btn:hover,
+    .close-btn:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Trigger Modal -->
+<!-- Modal -->
+<div id="wellbeingModal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-content" tabindex="-1">
+    <div class="modal-header">
+      <h2 id="modalTitle">Quick Well-Being Pulse Survey</h2>
+      <span class="close-btn" aria-label="Close modal">&times;</span>
+    </div>
+    <div class="modal-body">
+      <p>Take a moment to check in with your emotional well-being. Your input helps us improve mental health support across the Philippines.</p>
+      <p><strong>It only takes 2 minutes.</strong></p>
+    </div>
+    <div class="modal-footer">
+      <a href="https://forms.gle/94Tfv2fzBtwT336G7 " target="_blank" rel="noopener noreferrer">Take the Survey</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("wellbeingModal");
+    const closeBtn = document.querySelector(".close-btn");
+
+    // Show modal after 10 seconds
+    setTimeout(() => {
+      modal.style.display = "block";
+      modal.setAttribute("aria-hidden", "false");
+    }, 10000); // 10 seconds delay
+
+    // Close modal on click
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+      modal.setAttribute("aria-hidden", "true");
+    });
+
+    // Close modal on outside click
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+        modal.setAttribute("aria-hidden", "true");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
