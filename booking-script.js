@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     appointmentDate.min = new Date().toISOString().split('T')[0];
 
     // Pricing configuration
-    const basePrice = 800;
+    const basePrice = 899;
     const additionalPricePer10Min = 200;
 
     function calculatePrice() {
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (data.success) {
                     errorMsg.textContent = 'Booking submitted and summary email sent!';
                     bookingForm.reset();
-                    priceOutput.textContent = '₱800.00';
+                    priceOutput.textContent = '₱899.00';
                 } else {
                     errorMsg.textContent = 'Booking submitted, but email sending failed.';
                 }
