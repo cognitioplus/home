@@ -1,220 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book an Appointment with Cognitio+</title>
-    <meta name="description" content="Cognitio + | Your Partner in Resilience. Rooted in Culture. Powered by Technology.">
-    <meta name="keywords" content="consultation, therapy, booking, resilience, psychosocial, Cognitio Plus, appointment, mental health, coaching, support">
-    <meta name="author" content="Cognitio +">
-    <link rel="stylesheet" href="booking-style.css">
-    <link rel="manifest" href="booking-manifest.json">
-    <link rel="icon" href="favicon.ico">
-    <meta name="theme-color" content="#2a3142">
-    <!-- Structured data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Book Consultation - Cognitio +",
-      "description": "Book a resilience or therapy session with Cognitio+.",
-      "url": "https://cognitioplus.com/booking.html"
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cognitio+ | Book Mental Health Services</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Book culturally sensitive mental health services in the Philippines with dynamic pricing and subsidy options."/>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+    :root {
+      --primary-color: #a451a9;
+      --accent-color: #FFB81C;
+      --bg-color: #fff;
+      --text-color: #222;
+      --font-sans: 'Montserrat', Arial, sans-serif;
     }
-    </script>
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    input, select, textarea {
+      padding: 0.75rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .price-box {
+      background-color: #f9f9f9;
+      padding: 1rem;
+      border-left: 4px solid var(--primary-color);
+      margin-top: 1rem;
+    }
+
+    .consent {
+      margin-top: 1rem;
+    }
+
+    button {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      align-self: flex-start;
+    }
+
+    button:hover {
+      background-color: #8b3fa3;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Book an Appointment</h1>
-    </header>
-    <main>
-        <form id="bookingForm" aria-labelledby="bookingFormTitle" autocomplete="on" novalidate>
-            <h2 id="bookingFormTitle">Booking Form</h2>
+  <div class="container">
+    <h1>Cognitio+</h1>
+    <p>AI-Powered Digital Therapy & Community-Based Mental Health Care in the Philippines</p>
 
-            <!-- Section I: Consent & Policy Agreement -->
-            <fieldset>
-                <legend>Consent & Policy Agreement</legend>
-                <div>
-                    <input type="checkbox" id="consent" name="consent" required aria-required="true">
-                    <label for="consent">
-                        I understand and consent to the collection, use, and processing of my personal data for booking purposes, in compliance with the 
-                        <a href="https://cognitio-plus.appimize.app/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and 
-                        <a href="https://cognitio-plus.appimize.app/terms-of-services" target="_blank" rel="noopener noreferrer">Terms of Service</a>.
-                    </label>
-                </div>
-            </fieldset>
-            <br>
+    <form id="bookingForm">
+      <!-- Consent & Policy Agreement -->
+      <section>
+        <h2>Consent & Policy Agreement</h2>
+        <label class="consent">
+          <input type="checkbox" required>
+          I understand and consent to the collection, use, and processing of my personal data for booking purposes, in compliance with the
+          <a href=" https://cognitio-plus.aiwaapp.live/privacy-policy " target="_blank">Privacy Policy</a> and
+          <a href="https://cognitio-plus.aiwaapp.live/terms-of-service " target="_blank">Terms of Service</a>.
+        </label>
+      </section>
 
-            <!-- Section II: Personal Information -->
-            <fieldset>
-                <legend>I. Personal Information</legend>
-                <div>
-                    <label for="fullName">Full Name <span aria-hidden="true"></span></label>
-                    <input type="text" id="fullName" name="fullName" required aria-required="true" autocomplete="name" placeholder="e.g. Juan Dela Cruz" aria-describedby="fullNameHelp">
-                    <span id="fullNameHelp" class="sr-only">Please enter your full name as shown on a valid government issued ID.</span>
-                </div>
-                <div>
-                    <label for="email">Email Address <span aria-hidden="true"></span></label>
-                    <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" placeholder="e.g. juan@email.com" aria-describedby="emailHelp" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address.">
-                    <span id="emailHelp" class="sr-only">We'll send booking details to this address.</span>
-                </div>
-                <div>
-                    <label for="phone">Contact Number <span aria-hidden="true"></span></label>
-                    <input type="tel" id="phone" name="phone" required aria-required="true" autocomplete="tel" pattern="^\+?[0-9\s\-]{7,15}$" title="Please enter a valid phone number." placeholder="+63 912 345 6789" aria-describedby="phoneHelp">
-                    <span id="phoneHelp" class="sr-only">Format: +Country Code Number</span>
-                </div>
-                <div>
-                    <label for="dob">Date of Birth <span aria-hidden="true"></span></label>
-                    <input type="date" id="dob" name="dob" required aria-required="true" aria-describedby="dobHelp" max="2020-01-01">
-                    <span id="dobHelp" class="sr-only">Use MM/DD/YYYY format.</span>
-                </div>
-                <div>
-                    <label for="address">Complete Address <span aria-hidden="true"></span></label>
-                    <input type="text" id="address" name="address" required autocomplete="street-address" placeholder="e.g. 123 Main St., Quezon City, Metro Manila" aria-describedby="addressHelp">
-                    <span id="addressHelp" class="sr-only">Please enter your full address for location purposes.</span>
-                </div>
-            </fieldset>
-            <br>
+      <!-- User Type -->
+      <section>
+        <h2>I. Who Are You?</h2>
+        <label>
+          Select User Type
+          <select id="userType" required>
+            <option value="">-- Select One --</option>
+            <option value="individual">Individual</option>
+            <option value="community-org">Community Organization</option>
+            <option value="school">School / University</option>
+            <option value="government">LGU / Government Agency</option>
+            <option value="corporate">Corporate / Business</option>
+            <option value="researcher">Researcher / Academic</option>
+          </select>
+        </label>
+      </section>
 
-            <!-- Area Type Dropdown -->
-            <div>
-                <label for="areaType">Area Type:</label>
-                <select id="areaType" name="areaType" aria-describedby="areaTypeHelp">
-                    <option value="">Select Area Type</option>
-                    <option value="huc">Highly Urbanized City (HUCs)</option>
-                    <option value="non_huc">Non HUCs</option>
-                </select>
-                <span id="areaTypeHelp" class="sr-only">Select your area type based on your location.</span>
-            </div>
-            <br>
+      <!-- Service Category -->
+      <section>
+        <h2>II. Choose Your Service</h2>
+        <label>
+          Service Category
+          <select id="serviceCategory" required>
+            <option value="">-- Select One --</option>
+            <option value="online-individual">Online & Individual Solutions</option>
+            <option value="community-programs">Community-Based MH Programs</option>
+            <option value="organizational-training">Organizational Trainings & Consultancy</option>
+            <option value="research-policy">Research & Policy Advisory</option>
+          </select>
+        </label>
+      </section>
 
-            <!-- Vulnerable Population Segment Dropdown -->
-            <div>
-                <label for="vulnerableSegment">Vulnerable Population Segment:</label>
-                <select id="vulnerableSegment" name="vulnerableSegment" aria-describedby="vulnerableSegmentHelp">
-                    <option value="">How do you consider yourself? Select one of these segments.</option>
-                    <option value="student">Student</option>
-                    <option value="school_leaver">School Leaver</option>
-                    <option value="solo_parent">Solo Parent</option>
-                    <option value="elderly">Elderly</option>
-                    <option value="pwd">PWD</option>
-                    <option value="low_income_family">Low-income Family</option>
-                    <option value="victims_of_disasters">Victims of Disasters</option>
-                    <option value="informal_settler">Informal Settler</option>
-                    <option value="lgbtq+">LGBTQ+</option>
-                    <option value="general_public">General Public</option>
-                </select>
-                <span id="vulnerableSegmentHelp" class="sr-only">If you identify with any vulnerable segment, please select.</span>
-            </div>
-            <br>
+      <!-- Dynamic Sub-Service Options -->
+      <section id="subServiceSection">
+        <h2>III. Choose Your Sub-Service</h2>
+        <label>
+          <select id="subService" disabled required>
+            <option value="">Please select a service category first</option>
+          </select>
+        </label>
+      </section>
 
-            <!-- Section III: Service Type -->
-            <fieldset>
-                <legend>II. Service Type</legend>
-                <div>
-                    <label for="serviceType">Service <span aria-hidden="true"></span></label>
-                    <select id="serviceType" name="serviceType" required aria-required="true">
-                        <option value="">Select a service</option>
-                        <option value="consultation">Psychiatric Consultation</option>
-                        <option value="therapy">Talk Therapy</option>
-                        <option value="SPSS">Specialist Psychosocial Support</option>
-                        <option value="SPS Rehab">Specialist Psychosocial Rehab and Recovery Support</option>
-                        <option value="coaching">Resilience Coaching</option>
-                    </select>
-                </div>
-            </fieldset>
+      <!-- Duration & Details -->
+      <section id="detailsSection">
+        <h2>IV. Additional Details</h2>
+        <label>
+          Describe your needs or concerns:
+          <textarea rows="4" placeholder="e.g. stress, anxiety, resilience building, group support"></textarea>
+        </label>
+        <label>
+          Preferred Date:
+          <input type="date">
+        </label>
+        <label>
+          Preferred Time:
+          <input type="time">
+        </label>
+        <label>
+          Estimated Number of Participants (if applicable):
+          <input type="number" min="1" step="1">
+        </label>
+      </section>
 
-            <!-- Section IV: Session Duration -->
-            <fieldset>
-                <legend>III. Session Duration</legend>
-                <div>
-                    <label for="duration">Duration (minutes) <span aria-hidden="true"></span></label>
-                    <input type="number" id="duration" name="duration" required aria-required="true" min="30" max="180" step="15" value="60" aria-describedby="durationHelp">
-                    <span id="durationHelp" class="sr-only">Session must be between 30 and 180 minutes.</span>
-                </div>
-            </fieldset>
+      <!-- Vulnerable Segment -->
+      <section>
+        <h2>V. Vulnerable Population segment</h2>
+        <label>
+          Do you identify as part of any vulnerable population?
+          <select required>
+            <option value="none">None</option>
+            <option value="pwd">PWD</option>
+            <option value="lgbtq">LGBTQ+</option>
+            <option value="indigenous">Indigenous</option>
+            <option value="frontliner">Frontliner / Caregiver</option>
+            <option value="student">Student / Youth</option>
+          </select>
+        </label>
+      </section>
 
-            <!-- Section V: Appointment Date & Time -->
-            <fieldset>
-                <legend>IV. Appointment Date & Time</legend>
-                <div>
-                    <label for="appointmentDate">Date <span aria-hidden="true"></span></label>
-                    <input type="date" id="appointmentDate" name="appointmentDate" required aria-required="true" min="">
-                </div>
-                <div>
-                    <label for="appointmentTime">Time <span aria-hidden="true"></span></label>
-                    <input type="time" id="appointmentTime" name="appointmentTime" required aria-required="true">
-                </div>
-            </fieldset>
+      <!-- Price Calculation -->
+      <section>
+        <h2>VI. Price Calculation</h2>
+        <p><strong>Base price:</strong> Varies by service type.</p>
+        <p><strong>Additional factors:</strong> Duration, number of participants, and subsidy eligibility.</p>
+        <div class="price-box">
+          <p><strong>Estimated Cost:</strong> <span id="calculatedPrice">To be determined</span></p>
+        </div>
+        <button type="submit">Submit Booking Request</button>
+      </section>
+    </form>
+  </div>
 
-            <!-- Section VI: Concerns -->
-            <fieldset>
-                <legend>V. Briefly Describe Your Concerns</legend>
-                <div>
-                    <label for="concerns">Your Concerns <span aria-hidden="true"></span></label>
-                    <textarea id="concerns" name="concerns" required aria-required="true" placeholder="E.g. stress, anxiety, relationship, etc." aria-describedby="concernsHelp"></textarea>
-                    <span id="concernsHelp" class="sr-only">Briefly describe what brings you to this session.</span>
-                </div>
-            </fieldset>
+  <!-- Script -->
+  <script>
+    const serviceCategory = document.getElementById('serviceCategory');
+    const subService = document.getElementById('subService');
+    const userType = document.getElementById('userType');
+    const priceDisplay = document.getElementById('calculatedPrice');
 
-            <!-- Section VII: Price Calculation -->
-            <fieldset>
-                <legend>VI. Price Calculation</legend>
-                <div>
-                    <strong>Price Policy:</strong>
-                    <br>Base price: ₱899 for the first hour.
-                    <br>Additional minutes: ₱200 per 10 minutes.
-                    <br><span id="discountInfo" aria-live="polite"></span>
-                </div>
-                <div>
-                    <label for="calculatedPrice">Calculated Price</label>
-                    <output id="calculatedPrice" name="calculatedPrice" for="duration" aria-live="polite">₱899.00</output>
-                </div>
-            </fieldset>
+    // Mapping of service categories to sub-services
+    const subServices = {
+      "online-individual": [
+        { name: "Teletherapy - Video", basePrice: 899 },
+        { name: "E-Counseling - Chat", basePrice: 699 },
+        { name: "Resilience Navigator", basePrice: 0 },
+        { name: "Oasis: Mindfulness Sanctuary", basePrice: 0 },
+        { name: "Well-Be Stress Manager App", basePrice: 0 },
+        { name: "Gamified Learning Module", basePrice: 200 },
+        { name: "Psychoeducation Library Access", basePrice: 0 },
+      ],
+      "community-programs": [
+        { name: "Caring for the Carers (C4C)", basePrice: 5000 },
+        { name: "CareTalk Circles", basePrice: 3000 },
+        { name: "Indigenous Wellness Dialogues", basePrice: 7000 },
+        { name: "Substance Use Recovery Support", basePrice: 4000 },
+        { name: "Community Resilience Workshop", basePrice: 6000 },
+        { name: "Psychological First Aid (PFA) Training", basePrice: 8000 },
+      ],
+      "organizational-training": [
+        { name: "Mental Health Policy Co-Design", basePrice: 10000 },
+        { name: "PFA Certification", basePrice: 5000 },
+        { name: "Burnout Prevention Workshop", basePrice: 4000 },
+        { name: "Cultural Competence Training", basePrice: 4500 },
+        { name: "Case Management System Setup", basePrice: 7000 },
+        { name: "MH Integration into Emergency Plans", basePrice: 9000 },
+      ],
+      "research-policy": [
+        { name: "Mental Health Systems Audit", basePrice: 12000 },
+        { name: "Data Collection & Monitoring", basePrice: 8000 },
+        { name: "Behavioral Segmentation Analysis", basePrice: 6000 },
+        { name: "Program Impact Assessment", basePrice: 10000 },
+        { name: "Ethical AI Dashboard Setup", basePrice: 15000 },
+        { name: "Policy Implementation Planning", basePrice: 9000 },
+      ]
+    };
 
-            <!-- Error Message -->
-            <div id="errorMsg" role="alert" aria-live="assertive"></div>
+    // Update sub-service dropdown based on category
+    serviceCategory.addEventListener("change", function () {
+      const selectedCategory = this.value;
+      subService.innerHTML = "<option value=''>Select Sub-Service</option>";
+      if (selectedCategory && subServices[selectedCategory]) {
+        subServices[selectedCategory].forEach(option => {
+          const opt = document.createElement("option");
+          opt.value = option.name;
+          opt.textContent = option.name;
+          opt.dataset.price = option.basePrice;
+          subService.appendChild(opt);
+        });
+        subService.disabled = false;
+      } else {
+        subService.disabled = true;
+      }
+    });
 
-            <!-- Submit Button -->
-            <button type="submit" id="submitBtn">Book Now</button>
-        </form>
-    </main>
+    // Estimate price dynamically
+    subService.addEventListener("change", function () {
+      const selectedOption = this.options[this.selectedIndex];
+      const basePrice = parseFloat(selectedOption.dataset.price || 0);
+      priceDisplay.textContent = `₱${basePrice.toFixed(2)}`;
+    });
 
-    <!-- Accessibility: Error styling -->
-    <style>
-        #errorMsg {
-            color: #b00020;
-            background: #fff0f0;
-            border: 1px solid #b00020;
-            padding: 0.5em;
-            margin-top: 1em;
-            display: none;
-        }
-        #errorMsg.active {
-            display: block;
-        }
-    </style>
-
-    <!-- Booking Script -->
-    <script src="booking-script.js"></script>
-
-    <!-- Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('booking-sw.js')
-                    .then(reg => {
-                        console.log('Booking-Service Worker registered:', reg.scope);
-                    })
-                    .catch(err => {
-                        const errorElem = document.getElementById('errorMsg');
-                        if (errorElem) {
-                            errorElem.textContent = 'Offline features are unavailable: Service Worker registration failed.';
-                            errorElem.classList.add('active');
-                        }
-                        console.error('Service Worker registration failed:', err);
-                    });
-            });
-        }
-    </script>
+    // Optional: Handle form submission
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Your booking request has been submitted!");
+    });
+  </script>
 </body>
 </html>
